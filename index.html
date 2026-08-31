@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amingos Production — Full‑Service Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== THEME ===== */
+        :root {
+            --bg-primary: #f3efe9;
+            --bg-secondary: #e7dfd3;
+            --bg-card: rgba(255, 255, 255, 0.72);
+            --bg-hero: #efe6db;
+            --bg-nav: rgba(243, 239, 233, 0.9);
+            --text-primary: #171512;
+            --text-secondary: #2d2925;
+            --text-muted: #5b534d;
+            --accent: #8a5a2b;
+            --accent-light: #bf8c4d;
+            --border: rgba(122, 96, 69, 0.18);
+            --shadow: 0 14px 44px rgba(57, 38, 24, 0.08);
+            --shadow-hover: 0 22px 60px rgba(57, 38, 24, 0.12);
+            --gold: #c9943d;
+            --gold-light: #e3b567;
+            --gold-glow: rgba(201, 148, 61, 0.18);
+            --gold-glow-strong: rgba(201, 148, 61, 0.3);
+            --radius: 22px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --whatsapp: #25D366;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0f1720;
+            --bg-secondary: #171f29;
+            --bg-card: rgba(24, 33, 41, 0.9);
+            --bg-hero: #101820;
+            --bg-nav: rgba(15, 23, 32, 0.9);
+            --text-primary: #f5f1ea;
+            --text-secondary: #e5ddd1;
+            --text-muted: #b2a89d;
+            --accent: #d4a45d;
+            --accent-light: #efc884;
+            --border: rgba(212, 164, 93, 0.22);
+            --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+            --shadow-hover: 0 26px 70px rgba(0, 0, 0, 0.52);
+            --gold: #d4a45d;
+            --gold-light: #efc884;
+            --gold-glow: rgba(212, 164, 93, 0.15);
+            --gold-glow-strong: rgba(212, 164, 93, 0.28);
+        }
+
+        /* ===== RESET ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background 0.4s, color 0.4s;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+        /* ===== UTILITY ===== */
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        [data-theme="dark"] .section-label { color: var(--gold); }
+        .section-label::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin-top: 6px;
+            border-radius: 4px;
+        }
+        [data-theme="dark"] .section-label::after { background: var(--gold); }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .section-title span {
+            color: var(--accent);
+            position: relative;
+        }
+        [data-theme="dark"] .section-title span { color: var(--gold); }
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 38px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-family: var(--font-body);
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+        .btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 2.5px solid var(--accent);
+        }
+        .btn-outline:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: #0a0a0f;
+        }
+        .btn-gold:hover {
+            background: var(--gold-light);
+            box-shadow: 0 16px 48px var(--gold-glow-strong);
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 14px 0;
+            background: var(--bg-nav);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.4s;
+        }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-logo span { color: var(--accent); }
+        [data-theme="dark"] .nav-logo span { color: var(--gold); }
+        .nav-logo i { color: var(--accent); font-size: 1.3rem; }
+        [data-theme="dark"] .nav-logo i { color: var(--gold); }
+        .nav-links {
+            display: flex; align-items: center; gap: 36px; list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.85rem; font-weight: 600;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -6px; left: 0;
+            width: 0; height: 2.5px;
+            background: var(--accent);
+            transition: width 0.3s;
+            border-radius: 4px;
+        }
+        [data-theme="dark"] .nav-links a::after { background: var(--gold); }
+        .nav-links a:hover { color: var(--accent); }
+        [data-theme="dark"] .nav-links a:hover { color: var(--gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        .theme-toggle {
+            width: 48px; height: 48px; border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .theme-toggle:hover { border-color: var(--accent); transform: rotate(30deg) scale(1.05); }
+        [data-theme="dark"] .theme-toggle:hover { border-color: var(--gold); }
+        .theme-toggle .sun { display: none; }
+        .theme-toggle .moon { display: block; }
+        [data-theme="dark"] .theme-toggle .sun { display: block; }
+        [data-theme="dark"] .theme-toggle .moon { display: none; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 6px;
+        }
+        .hamburger span {
+            display: block; width: 28px; height: 2.5px;
+            background: var(--text-primary); border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scale(0); }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            padding: 140px 0 80px;
+            background: var(--bg-hero);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            /* removed glow – no blur */
+            display: none;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center; position: relative; z-index: 2;
+        }
+        .hero-content .badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--bg-secondary);
+            padding: 8px 22px; border-radius: 50px;
+            font-weight: 700; font-size: 0.75rem;
+            color: var(--accent);
+            border: 1.5px solid var(--border);
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
+        }
+        [data-theme="dark"] .hero-content .badge { color: var(--gold); }
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(3.2rem, 8vw, 5.4rem);
+            font-weight: 800; line-height: 1.05; margin-bottom: 20px;
+        }
+        .hero-content h1 .highlight {
+            color: var(--accent);
+            position: relative; display: inline-block;
+        }
+        [data-theme="dark"] .hero-content h1 .highlight { color: var(--gold); }
+        .hero-content h1 .highlight::after {
+            content: ''; position: absolute; bottom: 6px; left: 0;
+            width: 100%; height: 8px;
+            background: var(--gold-glow);
+            border-radius: 4px; z-index: -1;
+        }
+        .hero-content p {
+            font-size: 1.1rem; color: var(--text-secondary);
+            max-width: 460px; margin-bottom: 36px; line-height: 1.8;
+        }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
+        .hero-stats {
+            display: flex; gap: 48px; margin-top: 48px;
+            padding-top: 28px; border-top: 2px solid var(--border);
+        }
+        .hero-stats .stat h3 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem; color: var(--accent);
+            font-weight: 800;
+        }
+        [data-theme="dark"] .hero-stats .stat h3 { color: var(--gold); }
+        .hero-stats .stat p {
+            font-size: 0.85rem; color: var(--text-muted); font-weight: 500;
+        }
+        .hero-visual {
+            display: flex; justify-content: center; align-items: center;
+            position: relative;
+        }
+        .hero-visual .camera-frame {
+            width: 100%; max-width: 500px; aspect-ratio: 4/3;
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            border: 3px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 7rem; color: var(--accent);
+            box-shadow: var(--shadow);
+            transition: all 0.4s;
+        }
+        [data-theme="dark"] .hero-visual .camera-frame { color: var(--gold); }
+        .hero-visual .camera-frame:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        [data-theme="dark"] .hero-visual .camera-frame:hover { border-color: var(--gold); }
+        .hero-visual .camera-frame i { opacity: 0.2; transition: 0.4s; }
+        .hero-visual .camera-frame:hover i { opacity: 0.4; transform: scale(1.05); }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 100px 0; transition: background 0.4s; }
+        section:nth-child(even) { background: var(--bg-secondary); }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center;
+        }
+        .about-image {
+            border-radius: var(--radius); background: var(--bg-card);
+            aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
+            font-size: 5rem; color: var(--accent);
+            border: 3px solid var(--border); transition: all 0.4s;
+        }
+        [data-theme="dark"] .about-image { color: var(--gold); }
+        .about-image:hover {
+            transform: scale(1.02); border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        [data-theme="dark"] .about-image:hover { border-color: var(--gold); }
+        .about-image i { opacity: 0.15; transition: 0.4s; }
+        .about-image:hover i { opacity: 0.3; transform: scale(1.05); }
+        .about-features {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin-top: 24px;
+        }
+        .about-features .feat {
+            display: flex; align-items: center; gap: 10px;
+            font-weight: 600; padding: 10px 16px;
+            border-radius: 10px; background: var(--bg-card);
+            border: 1px solid var(--border); transition: all 0.3s;
+        }
+        .about-features .feat:hover {
+            border-color: var(--accent); transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        [data-theme="dark"] .about-features .feat:hover { border-color: var(--gold); }
+        .about-features .feat i { color: var(--accent); }
+        [data-theme="dark"] .about-features .feat i { color: var(--gold); }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+            gap: 28px; margin-top: 12px;
+        }
+        .service-card {
+            background: var(--bg-card); padding: 36px 28px;
+            border-radius: var(--radius); border: 2px solid var(--border);
+            transition: all 0.4s; text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-8px); border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
+        }
+        [data-theme="dark"] .service-card:hover { border-color: var(--gold); }
+        .service-card .icon {
+            font-size: 2.8rem; color: var(--accent);
+            margin-bottom: 16px; transition: 0.4s;
+        }
+        [data-theme="dark"] .service-card .icon { color: var(--gold); }
+        .service-card:hover .icon { transform: scale(1.1) rotate(3deg); }
+        .service-card h3 {
+            font-family: var(--font-heading); font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+        .service-card p { color: var(--text-muted); font-size: 0.92rem; }
+
+        /* ===== PORTFOLIO ===== */
+        .portfolio-grid {
+            display: grid; grid-template-columns: repeat(3,1fr);
+            gap: 24px; margin-top: 16px;
+        }
+        .portfolio-item {
+            border-radius: var(--radius); background: var(--bg-card);
+            border: 2px solid var(--border);
+            aspect-ratio: 4/3; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            font-size: 3.5rem; color: var(--accent);
+            transition: all 0.4s; cursor: pointer;
+            position: relative; overflow: hidden;
+        }
+        [data-theme="dark"] .portfolio-item { color: var(--gold); }
+        .portfolio-item i { opacity: 0.15; transition: 0.4s; }
+        .portfolio-item .overlay {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; opacity: 0; transition: 0.4s;
+            color: #fff; padding: 20px; text-align: center;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.03); border-color: var(--accent);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+        }
+        [data-theme="dark"] .portfolio-item:hover { border-color: var(--gold); }
+        .portfolio-item:hover .overlay { opacity: 1; }
+        .portfolio-item:hover i { opacity: 0.3; transform: scale(1.05); }
+        .portfolio-item .overlay h4 {
+            font-family: var(--font-heading); font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        .portfolio-item .overlay p { font-size: 0.85rem; opacity: 0.85; }
+
+        /* ===== TEAM ===== */
+        .team-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 30px; margin-top: 16px;
+        }
+        .team-card {
+            background: transparent; border: none; padding: 0; text-align: left;
+            cursor: pointer; transition: all 0.4s; border-radius: var(--radius);
+        }
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+        .team-card .avatar {
+            width: 100%; aspect-ratio: 4 / 5; border-radius: var(--radius);
+            background: var(--bg-primary); overflow: hidden; position: relative;
+            border: 2px solid var(--border); transition: all 0.4s;
+            box-shadow: var(--shadow);
+        }
+        .team-card .avatar img {
+            width: 100%; height: 100%; display: block; object-fit: cover;
+            transition: transform 0.45s ease, filter 0.45s ease;
+        }
+        .team-card:hover .avatar {
+            border-color: var(--accent); box-shadow: var(--shadow-hover);
+        }
+        [data-theme="dark"] .team-card:hover .avatar { border-color: var(--gold); }
+        .team-card:hover .avatar img {
+            transform: scale(1.04); filter: saturate(1.08);
+        }
+        .team-card .meta {
+            padding: 18px 8px 0;
+        }
+        .team-card h4 {
+            font-family: var(--font-heading); font-size: 1.45rem; margin: 0;
+            color: var(--text-primary);
+        }
+        .team-card .role {
+            color: var(--accent); font-weight: 700; font-size: 0.78rem;
+            letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px;
+        }
+        [data-theme="dark"] .team-card .role { color: var(--gold); }
+
+        /* ===== BTS ===== */
+        .bts-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 24px; margin-top: 16px;
+        }
+        .bts-item {
+            border-radius: var(--radius); background: var(--bg-card);
+            border: 2px solid var(--border); aspect-ratio: 4/3;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; color: var(--accent);
+            transition: all 0.4s; position: relative;
+        }
+        [data-theme="dark"] .bts-item { color: var(--gold); }
+        .bts-item i { opacity: 0.15; transition: 0.4s; }
+        .bts-item .bts-label {
+            position: absolute; bottom: 16px; left: 16px; right: 16px;
+            background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
+            padding: 12px 18px; border-radius: 10px;
+            color: #fff; font-weight: 600; font-size: 0.8rem;
+            opacity: 0; transform: translateY(12px);
+            transition: all 0.4s;
+        }
+        .bts-item:hover .bts-label { opacity: 1; transform: translateY(0); }
+        .bts-item:hover {
+            transform: scale(1.03); border-color: var(--accent);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+        }
+        [data-theme="dark"] .bts-item:hover { border-color: var(--gold); }
+        .bts-item:hover i { opacity: 0.3; transform: scale(1.05); }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+            gap: 28px; margin-top: 16px;
+        }
+        .testimonial-card {
+            background: var(--bg-card); padding: 32px 28px;
+            border-radius: var(--radius); border: 2px solid var(--border);
+            transition: all 0.4s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px); border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
+        }
+        [data-theme="dark"] .testimonial-card:hover { border-color: var(--gold); }
+        .testimonial-card .stars { color: var(--accent); margin-bottom: 12px; letter-spacing: 2px; }
+        [data-theme="dark"] .testimonial-card .stars { color: var(--gold); }
+        .testimonial-card blockquote {
+            font-style: italic; color: var(--text-secondary);
+            margin-bottom: 16px; line-height: 1.6;
+        }
+        .testimonial-card .client {
+            display: flex; align-items: center; gap: 14px;
+        }
+        .testimonial-card .client .initials {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; flex-shrink: 0;
+        }
+        [data-theme="dark"] .testimonial-card .client .initials { background: var(--gold); }
+        .testimonial-card .client .name { font-weight: 700; }
+        .testimonial-card .client .title { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+        }
+        .contact-info .detail {
+            display: flex; align-items: center; gap: 18px; margin-top: 20px;
+        }
+        .contact-info .detail i {
+            width: 46px; height: 46px; border-radius: 50%;
+            background: var(--bg-card); border: 2px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent); font-size: 1.1rem; transition: 0.4s;
+        }
+        [data-theme="dark"] .contact-info .detail i { color: var(--gold); }
+        .contact-info .detail:hover i {
+            border-color: var(--accent); transform: scale(1.1);
+        }
+        [data-theme="dark"] .contact-info .detail:hover i { border-color: var(--gold); }
+        .contact-form {
+            display: flex; flex-direction: column; gap: 18px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 16px 22px; border-radius: 14px;
+            border: 2px solid var(--border);
+            background: var(--bg-card); color: var(--text-primary);
+            font-family: var(--font-body); font-size: 1rem;
+            transition: 0.4s; outline: none;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 6px rgba(0,0,0,0.05);
+        }
+        [data-theme="dark"] .contact-form input:focus,
+        [data-theme="dark"] .contact-form textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 6px var(--gold-glow);
+        }
+        .contact-form textarea { min-height: 140px; resize: vertical; }
+
+        /* ===== GOOGLE MAP ===== */
+        .map-container {
+            margin-top: 40px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 2px solid var(--border);
+            height: 300px;
+        }
+        .map-container iframe {
+            width: 100%; height: 100%; border: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 48px 0 24px;
+            background: var(--bg-secondary);
+            border-top: 2px solid var(--border);
+        }
+        .footer-grid {
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 24px;
+        }
+        .footer-logo {
+            font-family: var(--font-heading); font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .footer-logo span { color: var(--accent); }
+        [data-theme="dark"] .footer-logo span { color: var(--gold); }
+        .footer-social {
+            display: flex; gap: 12px;
+        }
+        .footer-social a {
+            width: 42px; height: 42px; border-radius: 50%;
+            border: 2px solid var(--border); display: flex;
+            align-items: center; justify-content: center;
+            color: var(--text-muted); transition: all 0.3s;
+        }
+        .footer-social a:hover {
+            border-color: var(--accent); color: var(--accent);
+            transform: translateY(-3px);
+        }
+        [data-theme="dark"] .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+        .footer-copy {
+            width: 100%; text-align: center; margin-top: 24px;
+            padding-top: 24px; border-top: 2px solid var(--border);
+            font-size: 0.85rem; color: var(--text-muted);
+        }
+        .footer-copy i { color: var(--accent); }
+        [data-theme="dark"] .footer-copy i { color: var(--gold); }
+
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .whatsapp-float {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #25D366; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            border: none; cursor: pointer;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        /* ===== FULL‑SCREEN TEAM MODAL ===== */
+        .team-modal-overlay {
+            position: fixed; inset: 0; z-index: 2000;
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center; justify-content: center;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        .team-modal-overlay.active { display: flex; }
+        .team-modal-content {
+            position: relative;
+            width: min(100%, 1100px);
+            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+            border-radius: 30px;
+            padding: 32px 28px 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-hover);
+            animation: modalFade 0.35s ease;
+            max-height: 88vh;
+            overflow-y: auto;
+        }
+        @keyframes modalFade {
+            from { opacity: 0; transform: scale(0.96) translateY(24px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .team-modal-close {
+            position: absolute; top: 18px; right: 20px;
+            background: rgba(0,0,0,0.08); border: none;
+            width: 42px; height: 42px; border-radius: 50%;
+            font-size: 2rem; cursor: pointer;
+            color: var(--text-primary); z-index: 2;
+            transition: 0.3s;
+        }
+        .team-modal-close:hover { color: var(--accent); transform: rotate(90deg); }
+        [data-theme="dark"] .team-modal-close:hover { color: var(--gold); }
+
+        .team-modal-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            opacity: 0.2;
+            border-radius: 30px;
+            z-index: 0;
+            pointer-events: none;
+            filter: saturate(1.1) contrast(1.08);
+        }
+        .team-modal-body {
+            position: relative; z-index: 1;
+        }
+        .team-modal-body .member-detail {
+            display: flex; gap: 36px; flex-wrap: wrap;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .team-modal-body .member-detail img {
+            width: 260px; height: 360px; border-radius: 24px;
+            object-fit: cover; border: 2px solid var(--border);
+            flex-shrink: 0; box-shadow: var(--shadow);
+        }
+        .team-modal-body .member-info {
+            flex: 1 1 380px;
+            min-width: 0;
+        }
+        .team-modal-body .member-info h2 {
+            font-family: var(--font-heading); font-size: clamp(2.3rem, 4vw, 4rem);
+        }
+        .team-modal-body .member-info .role {
+            font-size: 1.05rem; font-weight: 700; letter-spacing: 0.08em;
+            color: var(--accent); text-transform: uppercase; margin-top: 8px;
+        }
+        [data-theme="dark"] .team-modal-body .member-info .role { color: var(--gold); }
+        .team-modal-body .member-info .bio {
+            color: var(--text-secondary); margin: 18px 0 16px; font-size: 1.02rem;
+            line-height: 1.8;
+        }
+        .member-highlights {
+            display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 10px;
+        }
+        .member-highlight {
+            background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+            color: var(--text-primary); padding: 8px 12px; border-radius: 999px;
+            font-size: 0.8rem; font-weight: 600;
+        }
+        .team-modal-body .suggestions {
+            margin-top: 34px; padding-top: 28px; border-top: 2px solid var(--border);
+        }
+        .team-modal-body .suggestions h4 {
+            font-family: var(--font-heading); margin-bottom: 18px; font-size: 1.7rem;
+        }
+        .suggestion-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px;
+        }
+        .suggestion-card {
+            display: flex; align-items: center; gap: 12px;
+            background: rgba(255,255,255,0.04); padding: 10px 12px;
+            border-radius: 16px; border: 1px solid var(--border);
+            cursor: pointer; transition: all 0.3s;
+        }
+        .suggestion-card:hover {
+            border-color: var(--accent); transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        [data-theme="dark"] .suggestion-card:hover { border-color: var(--gold); }
+        .suggestion-card img {
+            width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
+        }
+        .suggestion-card .s-name { font-weight: 700; font-size: 0.92rem; }
+        .suggestion-card .s-role { font-size: 0.72rem; color: var(--text-muted); }
+
+        /* ===== ADMIN PANEL (hidden by default, toggled via key) ===== */
+        .admin-dashboard {
+            display: none;
+            padding: 100px 0 60px;
+            background: var(--bg-primary);
+        }
+        .admin-dashboard.active { display: block; }
+        .admin-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+            gap: 20px; margin-bottom: 40px;
+        }
+        .admin-stat-card {
+            background: var(--bg-card); padding: 20px;
+            border-radius: var(--radius); border: 2px solid var(--border);
+            text-align: center;
+        }
+        .admin-stat-card h3 { font-size: 2rem; color: var(--accent); }
+        [data-theme="dark"] .admin-stat-card h3 { color: var(--gold); }
+        .admin-stat-card p { color: var(--text-muted); }
+        .admin-table {
+            width: 100%; border-collapse: collapse;
+            background: var(--bg-card); border-radius: var(--radius);
+            overflow: hidden; border: 2px solid var(--border);
+        }
+        .admin-table th, .admin-table td {
+            padding: 14px 18px; text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .admin-table th { background: var(--bg-primary); font-weight: 700; }
+        .admin-table tr:hover { background: var(--bg-primary); }
+        .admin-actions button {
+            background: var(--accent); color: #fff;
+            border: none; padding: 6px 14px; border-radius: 8px;
+            cursor: pointer; margin: 0 4px;
+            transition: 0.3s;
+        }
+        [data-theme="dark"] .admin-actions button { background: var(--gold); color: #0a0a0f; }
+        .admin-actions button:hover { opacity: 0.8; transform: scale(1.05); }
+        .admin-add-btn {
+            background: var(--accent); color: #fff;
+            border: none; padding: 12px 24px; border-radius: 12px;
+            cursor: pointer; margin: 16px 0;
+            font-weight: 700; transition: 0.3s;
+        }
+        [data-theme="dark"] .admin-add-btn { background: var(--gold); color: #0a0a0f; }
+        .admin-add-btn:hover { transform: scale(1.05); }
+
+        /* ===== CLIENT PORTAL ===== */
+        #clientPortal {
+            display: none;
+            padding: 100px 0 60px;
+            background: var(--bg-primary);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid {
+                grid-template-columns: 1fr; text-align: center;
+            }
+            .hero-content p { margin: 0 auto 36px; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .about-features { justify-items: center; }
+            .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed; inset: 0; background: var(--bg-primary);
+                flex-direction: column; justify-content: center;
+                gap: 32px; font-size: 1.2rem;
+                transform: translateX(100%);
+                transition: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+                z-index: 999; padding: 40px;
+            }
+            .nav-links.open { transform: translateX(0); }
+            .hamburger { display: flex; z-index: 1001; }
+            .hero { padding: 120px 0 60px; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr 1fr; }
+            .bts-grid { grid-template-columns: 1fr 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .team-modal-content { padding: 24px; margin: 12px; }
+            .team-modal-body .member-detail { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .services-grid, .team-grid, .bts-grid { grid-template-columns: 1fr; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .admin-stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ===== REVEAL ANIMATIONS ===== */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+        .reveal-scale { opacity: 0; transform: scale(0.94); transition: all 0.9s cubic-bezier(0.34,1.56,0.64,1); }
+        .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+        /* Floating elements */
+        .float-anim {
+            animation: floatY 6s ease-in-out infinite;
+        }
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo" id="homeLink"><i class="fas fa-camera"></i> Amingos<span>Production</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Demos</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#bts">BTS</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="clientPortalLink">Client</a></li>
+                <!-- Admin link removed – accessible via Ctrl+Shift+A -->
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle"><span class="sun"><i class="fas fa-sun"></i></span><span class="moon"><i class="fas fa-moon"></i></span></button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN SITE CONTENT ===== -->
+    <div id="mainSite">
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge"><i class="fas fa-circle" style="font-size:0.5rem;"></i> Now Booking 2026</div>
+                        <h1>Visual <span class="highlight">Storytelling</span><br />That Connects</h1>
+                        <p>Amingos Production – where photography, video, and marketing converge. We craft authentic content that resonates with your audience.</p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn btn-gold"><i class="fas fa-play"></i> View Work</a>
+                            <a href="#contact" class="btn btn-outline"><i class="fas fa-pen"></i> Start Project</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat"><h3 id="statWeddings">150+</h3><p>Projects Delivered</p></div>
+                            <div class="stat"><h3 id="statRating">4.9★</h3><p>Client Rating</p></div>
+                            <div class="stat"><h3 id="statAwards">12</h3><p>Awards &amp; Recognition</p></div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="camera-frame float-anim"><i class="fas fa-camera-retro"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal-left"><i class="fas fa-images"></i></div>
+                    <div class="about-content reveal-right">
+                        <span class="section-label">About</span>
+                        <h2 class="section-title">Where <span>Creativity</span> Meets Strategy</h2>
+                        <p class="section-sub">Based in Ambikapur, Amingos Production is a full‑service creative studio. We blend stunning visuals with smart marketing to elevate brands and capture life’s most important moments.</p>
+                        <div class="about-features">
+                            <div class="feat"><i class="fas fa-check-circle"></i> Photography &amp; Video</div>
+                            <div class="feat"><i class="fas fa-check-circle"></i> Content Creation</div>
+                            <div class="feat"><i class="fas fa-check-circle"></i> Social Media Marketing</div>
+                            <div class="feat"><i class="fas fa-check-circle"></i> Performance Marketing</div>
+                        </div>
+                        <a href="#contact" class="btn btn-gold" style="margin-top:24px;"><i class="fas fa-arrow-right"></i> Work With Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">What We Do</span>
+                    <h2 class="section-title">Our <span>Services</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">From concept to conversion – we deliver.</p>
+                </div>
+                <div class="services-grid" id="servicesContainer"></div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Our Work</span>
+                    <h2 class="section-title">Featured <span>Demos</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">A curated selection of our favourite projects.</p>
+                </div>
+                <div class="portfolio-grid" id="portfolioContainer"></div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Our Team</span>
+                    <h2 class="section-title">The <span>Creatives</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">Passionate people behind every frame and campaign.</p>
+                </div>
+                <div class="team-grid" id="teamContainer"></div>
+            </div>
+        </section>
+
+        <!-- BTS -->
+        <section id="bts">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Behind The Scenes</span>
+                    <h2 class="section-title">The <span>Process</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">A glimpse into how we create magic.</p>
+                </div>
+                <div class="bts-grid" id="btsContainer"></div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Testimonials</span>
+                    <h2 class="section-title">What <span>Clients</span> Say</h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">Real stories from people we've worked with.</p>
+                </div>
+                <div class="testimonial-grid" id="testimonialContainer"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Get In Touch</span>
+                    <h2 class="section-title">Let's Create <span>Together</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">Have a project? We’d love to hear about it.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal-left">
+                        <h3>Bring your vision to life.</h3>
+                        <p style="color:var(--text-secondary);">Whether it’s a wedding, a brand campaign, or a marketing strategy – we’re here to make it extraordinary.</p>
+                        <div class="detail"><i class="fas fa-map-marker-alt"></i><div><strong>Ambikapur</strong><br /><span style="color:var(--text-muted);">Chhattisgarh, India</span></div></div>
+                        <div class="detail"><i class="fas fa-phone-alt"></i><div><strong>+91 98765 43210</strong><br /><span style="color:var(--text-muted);">Mon–Sat, 9AM – 8PM</span></div></div>
+                        <div class="detail"><i class="fas fa-envelope"></i><div><strong>hello@amingos.pro</strong><br /><span style="color:var(--text-muted);">We reply within 24h</span></div></div>
+                    </div>
+                    <form class="contact-form reveal-right" id="contactForm">
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Email Address" required />
+                        <input type="text" placeholder="Subject" />
+                        <textarea placeholder="Tell us about your project…" required></textarea>
+                        <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+                <!-- Google Map -->
+                <div class="map-container reveal-scale" style="margin-top:40px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14915.178548457308!2d83.1667!3d23.1167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3980f1e6a4d6e7b9%3A0x9d8c7a7f4b9d7c!2sAmbikapur%2C%20Chhattisgarh%2C%20India!5e0!3m2!1sen!2sin!4v1710000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== ADMIN DASHBOARD (hidden, toggled by Ctrl+Shift+A) ===== -->
+    <div id="adminPanel" class="admin-dashboard">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+                <h2 class="section-title" style="margin:0;">Admin <span>Dashboard</span></h2>
+                <button class="btn btn-outline" id="adminLogout">Logout</button>
+            </div>
+            <div class="admin-stats" id="adminStats"></div>
+            <div style="margin-bottom:20px;">
+                <button class="admin-add-btn" data-section="portfolio">+ Add Portfolio</button>
+                <button class="admin-add-btn" data-section="team">+ Add Team</button>
+                <button class="admin-add-btn" data-section="services">+ Add Service</button>
+                <button class="admin-add-btn" data-section="project">+ Add Project</button>
+            </div>
+            <div id="adminContent">
+                <!-- dynamic tables -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CLIENT PORTAL ===== -->
+    <div id="clientPortal">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+                <h2 class="section-title" style="margin:0;">Client <span>Portal</span></h2>
+                <button class="btn btn-outline" id="clientLogout">Logout</button>
+            </div>
+            <div id="clientContent"></div>
+        </div>
+    </div>
+
+    <!-- ===== FULL‑SCREEN TEAM MODAL ===== -->
+    <div class="team-modal-overlay" id="teamModal">
+        <div class="team-modal-content">
+            <button class="team-modal-close" id="teamModalClose">&times;</button>
+            <div class="team-modal-bg" id="teamModalBg"></div>
+            <div class="team-modal-body" id="teamModalBody"></div>
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/919876543210?text=Hi%20Amingos%20Production%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ============================================================
+        //  DATA LAYER (localStorage)
+        // ============================================================
+        const DEFAULT_DATA = {
+            services: [
+                { id: 1, icon: 'fa-camera', title: 'Photography & Video', desc: 'Wedding, event, and brand storytelling with a cinematic touch.' },
+                { id: 2, icon: 'fa-pen-fancy', title: 'Content Creation', desc: 'Engaging posts, reels, and long‑form content that tells your story.' },
+                { id: 3, icon: 'fa-share-alt', title: 'Social Media Marketing', desc: 'Strategic campaigns to grow your presence and connect with your audience.' },
+                { id: 4, icon: 'fa-chart-line', title: 'Performance Marketing', desc: 'Data‑driven ads, analytics, and optimisation for measurable results.' }
+            ],
+            portfolio: [
+                { id: 1, title: 'Sunita Saree House', desc: 'Brand Campaign', type: 'image', url: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&h=400&fit=crop' },
+                { id: 2, title: 'Dream Wedding', desc: 'Cinematic Reel', type: 'video', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+                { id: 3, title: 'Product Story', desc: 'Content Series', type: 'image', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop' },
+                { id: 4, title: 'Pre‑Wedding Shoot', desc: 'Couple\'s Journey', type: 'image', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop' },
+                { id: 5, title: 'Fashion Reel', desc: 'Sunita Saree House', type: 'video', url: 'https://www.youtube.com/embed/tgbNymZ7vqY' },
+                { id: 6, title: 'Event Coverage', desc: 'Corporate Gala', type: 'image', url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop' }
+            ],
+            team: [
+                { id: 1, name: 'Amingo Singh', role: 'Founder & Lead Photographer', bio: '10+ years of capturing stories. Visionary and storyteller with a refined cinematic eye for weddings, campaigns, and portraits.', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80', specialties: ['Wedding Stories', 'Brand Portraits', 'Direction'] },
+                { id: 2, name: 'Priya Sharma', role: 'Cinematographer & Editor', bio: 'Crafts cinematic reels with a keen eye for motion, pacing, and emotional detail that keeps audiences engaged.', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80', specialties: ['Reels', 'Mood Editing', 'Cinematography'] },
+                { id: 3, name: 'Rahul Verma', role: 'Lighting & Production', bio: 'Ensures every shot is perfectly lit and production-ready, balancing technical precision with artistic atmosphere.', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80', specialties: ['Lighting', 'Set Design', 'Production'] },
+                { id: 4, name: 'Anjali Gupta', role: 'Creative Director', bio: 'Brings concepts to life with innovative storytelling, visual direction, and a branding-first approach.', avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80', specialties: ['Creative Direction', 'Campaigns', 'Brand Strategy'] }
+            ],
+            bts: [
+                { id: 1, icon: 'fa-camera', label: 'On‑location shoot' },
+                { id: 2, icon: 'fa-sliders-h', label: 'Color grading' },
+                { id: 3, icon: 'fa-cut', label: 'Editing suite' },
+                { id: 4, icon: 'fa-lightbulb', label: 'Lighting setup' },
+                { id: 5, icon: 'fa-music', label: 'Sound design' },
+                { id: 6, icon: 'fa-laugh', label: 'Fun on set' }
+            ],
+            testimonials: [
+                { id: 1, client: 'Riya & Mohit', title: 'Wedding Clients', text: 'Amingos Production made our wedding feel like a movie. The attention to detail and the emotions captured — simply outstanding.', rating: 5 },
+                { id: 2, client: 'Sunita Saree House', title: 'Brand Partner', text: 'The promo reel for our saree house went viral! Amingos understands brand storytelling like no one else.', rating: 5 },
+                { id: 3, client: 'Amit Kumar', title: 'Corporate Client', text: 'Professional, creative, and so easy to work with. Our corporate event coverage was flawless.', rating: 5 }
+            ],
+            projects: [
+                { id: 1, clientName: 'Riya & Mohit', type: 'Wedding', status: 'Completed', date: '2026-01-15', deliverables: 'Gallery Link', feedback: '' },
+                { id: 2, clientName: 'Sunita Saree House', type: 'Brand Campaign', status: 'In Progress', date: '2026-02-01', deliverables: 'Reel Draft', feedback: '' },
+            ],
+            bookings: [
+                { date: '2026-03-10', client: 'Test Client' }
+            ],
+            feedbacks: [
+                { projectId: 1, rating: 5, comment: 'Amazing work!', client: 'Riya & Mohit' }
+            ]
+        };
+
+        function loadData() {
+            let data = localStorage.getItem('amingosData');
+            if (!data) {
+                localStorage.setItem('amingosData', JSON.stringify(DEFAULT_DATA));
+                return JSON.parse(JSON.stringify(DEFAULT_DATA));
+            }
+            return JSON.parse(data);
+        }
+
+        function saveData(data) {
+            localStorage.setItem('amingosData', JSON.stringify(data));
+        }
+
+        // ============================================================
+        //  RENDER FUNCTIONS
+        // ============================================================
+        function renderServices() {
+            const data = loadData();
+            const container = document.getElementById('servicesContainer');
+            container.innerHTML = data.services.map(s => `
+                <div class="service-card reveal" style="transition-delay:0.05s;">
+                    <div class="icon"><i class="fas ${s.icon}"></i></div>
+                    <h3>${s.title}</h3>
+                    <p>${s.desc}</p>
+                </div>
+            `).join('');
+            observeReveals();
+        }
+
+        function renderPortfolio() {
+            const data = loadData();
+            const container = document.getElementById('portfolioContainer');
+            container.innerHTML = data.portfolio.map(p => `
+                <div class="portfolio-item reveal-scale" style="transition-delay:0.05s;" onclick="openPortfolioItem(${p.id})">
+                    ${p.type === 'image' ? `<img src="${p.url}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.3;" />` : `<i class="fas fa-play-circle"></i>`}
+                    <div class="overlay">
+                        <h4>${p.title}</h4>
+                        <p>${p.desc}</p>
+                        <p style="font-size:0.7rem;opacity:0.6;">${p.type === 'video' ? '▶ Click to play' : '🖼 Click to view'}</p>
+                    </div>
+                </div>
+            `).join('');
+            observeReveals();
+        }
+
+        function renderTeam() {
+            const data = loadData();
+            const container = document.getElementById('teamContainer');
+            container.innerHTML = data.team.map(m => `
+                <div class="team-card reveal" style="transition-delay:0.05s;" onclick="openTeamProfile(${m.id})">
+                    <div class="avatar">
+                        <img src="${m.avatar}" alt="${m.name}" />
+                    </div>
+                    <div class="meta">
+                        <h4>${m.name}</h4>
+                        <p class="role">${m.role}</p>
+                    </div>
+                </div>
+            `).join('');
+            observeReveals();
+        }
+
+        function renderBTS() {
+            const data = loadData();
+            const container = document.getElementById('btsContainer');
+            container.innerHTML = data.bts.map(b => `
+                <div class="bts-item reveal-scale" style="transition-delay:0.05s;">
+                    <i class="fas ${b.icon}"></i>
+                    <div class="bts-label"><i class="fas ${b.icon}" style="margin-right:8px;"></i> ${b.label}</div>
+                </div>
+            `).join('');
+            observeReveals();
+        }
+
+        function renderTestimonials() {
+            const data = loadData();
+            const container = document.getElementById('testimonialContainer');
+            container.innerHTML = data.testimonials.map(t => `
+                <div class="testimonial-card reveal" style="transition-delay:0.05s;">
+                    <div class="stars">${'<i class="fas fa-star"></i>'.repeat(t.rating)}</div>
+                    <blockquote>“${t.text}”</blockquote>
+                    <div class="client">
+                        <div class="initials">${t.client.split(' ').map(n=>n[0]).join('')}</div>
+                        <div>
+                            <div class="name">${t.client}</div>
+                            <div class="title">${t.title}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            observeReveals();
+        }
+
+        function renderAll() {
+            renderServices();
+            renderPortfolio();
+            renderTeam();
+            renderBTS();
+            renderTestimonials();
+            updateStats();
+        }
+
+        // ============================================================
+        //  STATS & ADMIN
+        // ============================================================
+        function updateStats() {
+            const data = loadData();
+            document.getElementById('statWeddings').textContent = data.projects.length + '+';
+            let avg = 4.9;
+            if (data.feedbacks.length) {
+                const sum = data.feedbacks.reduce((a,f) => a + f.rating, 0);
+                avg = sum / data.feedbacks.length;
+            }
+            document.getElementById('statRating').textContent = avg.toFixed(1) + '★';
+            document.getElementById('statAwards').textContent = data.portfolio.length;
+        }
+
+        // Admin dashboard render
+        function renderAdmin() {
+            const data = loadData();
+            const statsHtml = `
+                <div class="admin-stat-card"><h3>${data.projects.length}</h3><p>Projects</p></div>
+                <div class="admin-stat-card"><h3>${data.team.length}</h3><p>Team Members</p></div>
+                <div class="admin-stat-card"><h3>${data.portfolio.length}</h3><p>Portfolio Items</p></div>
+                <div class="admin-stat-card"><h3>${data.feedbacks.length}</h3><p>Feedbacks</p></div>
+            `;
+            document.getElementById('adminStats').innerHTML = statsHtml;
+
+            let content = `<h3 style="margin:20px 0 10px;">Portfolio</h3>
+                <table class="admin-table"><thead><tr><th>Title</th><th>Type</th><th>Actions</th></tr></thead><tbody>
+                ${data.portfolio.map(p => `<tr><td>${p.title}</td><td>${p.type}</td><td class="admin-actions"><button onclick="editItem('portfolio',${p.id})">Edit</button><button onclick="deleteItem('portfolio',${p.id})">Delete</button></td></tr>`).join('')}
+                </tbody></table>
+                <h3 style="margin:20px 0 10px;">Team</h3>
+                <table class="admin-table"><thead><tr><th>Name</th><th>Role</th><th>Actions</th></tr></thead><tbody>
+                ${data.team.map(m => `<tr><td>${m.name}</td><td>${m.role}</td><td class="admin-actions"><button onclick="editItem('team',${m.id})">Edit</button><button onclick="deleteItem('team',${m.id})">Delete</button></td></tr>`).join('')}
+                </tbody></table>
+                <h3 style="margin:20px 0 10px;">Services</h3>
+                <table class="admin-table"><thead><tr><th>Title</th><th>Actions</th></tr></thead><tbody>
+                ${data.services.map(s => `<tr><td>${s.title}</td><td class="admin-actions"><button onclick="editItem('services',${s.id})">Edit</button><button onclick="deleteItem('services',${s.id})">Delete</button></td></tr>`).join('')}
+                </tbody></table>
+                <h3 style="margin:20px 0 10px;">Projects</h3>
+                <table class="admin-table"><thead><tr><th>Client</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+                ${data.projects.map(pr => `<tr><td>${pr.clientName}</td><td>${pr.status}</td><td class="admin-actions"><button onclick="editItem('projects',${pr.id})">Edit</button><button onclick="deleteItem('projects',${pr.id})">Delete</button></td></tr>`).join('')}
+                </tbody></table>
+            `;
+            document.getElementById('adminContent').innerHTML = content;
+        }
+
+        // CRUD helpers
+        function deleteItem(section, id) {
+            if (!confirm(`Delete this ${section.slice(0,-1)}?`)) return;
+            const data = loadData();
+            data[section] = data[section].filter(item => item.id !== id);
+            saveData(data);
+            renderAdmin();
+            renderAll();
+        }
+
+        function editItem(section, id) {
+            const data = loadData();
+            const item = data[section].find(i => i.id === id);
+            if (!item) return;
+            if (section === 'portfolio') {
+                const newTitle = prompt('Title:', item.title);
+                if (newTitle !== null) item.title = newTitle;
+                const newDesc = prompt('Description:', item.desc);
+                if (newDesc !== null) item.desc = newDesc;
+                const newUrl = prompt('URL:', item.url);
+                if (newUrl !== null) item.url = newUrl;
+            } else if (section === 'team') {
+                const newName = prompt('Name:', item.name);
+                if (newName !== null) item.name = newName;
+                const newRole = prompt('Role:', item.role);
+                if (newRole !== null) item.role = newRole;
+                const newBio = prompt('Bio:', item.bio);
+                if (newBio !== null) item.bio = newBio;
+            } else if (section === 'services') {
+                const newTitle = prompt('Title:', item.title);
+                if (newTitle !== null) item.title = newTitle;
+                const newDesc = prompt('Description:', item.desc);
+                if (newDesc !== null) item.desc = newDesc;
+            } else if (section === 'projects') {
+                const newStatus = prompt('Status (Planned/In Progress/Completed):', item.status);
+                if (newStatus !== null) item.status = newStatus;
+            }
+            saveData(data);
+            renderAdmin();
+            renderAll();
+        }
+
+        document.querySelectorAll('.admin-add-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const section = this.dataset.section;
+                const data = loadData();
+                let newItem = { id: Date.now() };
+                if (section === 'portfolio') {
+                    newItem.title = prompt('Title:') || 'New Demo';
+                    newItem.desc = prompt('Description:') || 'Demo';
+                    newItem.type = prompt('Type (image/video):') || 'image';
+                    newItem.url = prompt('URL:') || 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&h=400&fit=crop';
+                } else if (section === 'team') {
+                    newItem.name = prompt('Name:') || 'New Member';
+                    newItem.role = prompt('Role:') || 'Role';
+                    newItem.bio = prompt('Bio:') || 'Bio';
+                    newItem.avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(newItem.name)}&background=b8860b&color=fff&size=140`;
+                } else if (section === 'services') {
+                    newItem.icon = prompt('Icon class (e.g., fa-camera):') || 'fa-camera';
+                    newItem.title = prompt('Title:') || 'New Service';
+                    newItem.desc = prompt('Description:') || 'Service description.';
+                } else if (section === 'project') {
+                    newItem.clientName = prompt('Client Name:') || 'Client';
+                    newItem.type = prompt('Project Type:') || 'General';
+                    newItem.status = prompt('Status (Planned/In Progress/Completed):') || 'Planned';
+                    newItem.date = new Date().toISOString().slice(0,10);
+                    newItem.deliverables = '';
+                    newItem.feedback = '';
+                }
+                data[section].push(newItem);
+                saveData(data);
+                renderAdmin();
+                renderAll();
+            });
+        });
+
+        // ============================================================
+        //  TEAM MODAL (full screen with background image)
+        // ============================================================
+        function openTeamProfile(id) {
+            const data = loadData();
+            const member = data.team.find(m => m.id === id);
+            if (!member) return;
+            const modal = document.getElementById('teamModal');
+            const body = document.getElementById('teamModalBody');
+            const bg = document.getElementById('teamModalBg');
+            bg.style.backgroundImage = `url(${member.avatar})`;
+
+            const specialties = (member.specialties && member.specialties.length)
+                ? member.specialties.map(item => `<span class="member-highlight">${item}</span>`).join('')
+                : '<span class="member-highlight">Creative Storytelling</span>';
+
+            const others = data.team.filter(m => m.id !== id);
+            let suggestionsHtml = '';
+            if (others.length) {
+                suggestionsHtml = `
+                    <div class="suggestions">
+                        <h4>Other team members</h4>
+                        <div class="suggestion-grid">
+                        ${others.map(m => `
+                            <div class="suggestion-card" onclick="openTeamProfile(${m.id})">
+                                <img src="${m.avatar}" alt="${m.name}" />
+                                <div>
+                                    <div class="s-name">${m.name}</div>
+                                    <div class="s-role">${m.role}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            body.innerHTML = `
+                <div class="member-detail">
+                    <img src="${member.avatar}" alt="${member.name}" />
+                    <div class="member-info">
+                        <h2>${member.name}</h2>
+                        <div class="role">${member.role}</div>
+                        <div class="bio">${member.bio}</div>
+                        <div class="member-highlights">${specialties}</div>
+                        <div style="display:flex; gap:14px; margin-top:18px; color:var(--accent); font-size:1.1rem;">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                ${suggestionsHtml}
+            `;
+            modal.classList.add('active');
+        }
+
+        function closeTeamModal() {
+            document.getElementById('teamModal').classList.remove('active');
+        }
+        document.getElementById('teamModalClose').addEventListener('click', closeTeamModal);
+        document.getElementById('teamModal').addEventListener('click', function(e) {
+            if (e.target === this) closeTeamModal();
+        });
+
+        // ============================================================
+        //  PORTFOLIO ITEM CLICK
+        // ============================================================
+        function openPortfolioItem(id) {
+            const data = loadData();
+            const item = data.portfolio.find(p => p.id === id);
+            if (!item) return;
+            if (item.type === 'video') {
+                window.open(item.url, '_blank');
+            } else {
+                window.open(item.url, '_blank');
+            }
+        }
+
+        // ============================================================
+        //  CLIENT PORTAL
+        // ============================================================
+        document.getElementById('clientPortalLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = prompt('Enter your email to access client portal:');
+            if (email && email.includes('@')) {
+                showClientPortal(email);
+            } else if (email !== null) {
+                alert('Please enter a valid email.');
+            }
+        });
+
+        let currentClient = null;
+
+        function showClientPortal(email) {
+            currentClient = email;
+            document.getElementById('mainSite').style.display = 'none';
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('clientPortal').style.display = 'block';
+            renderClientDashboard(email);
+        }
+
+        function renderClientDashboard(email) {
+            const data = loadData();
+            const clientProjects = data.projects.filter(p => p.clientName.toLowerCase().includes(email.split('@')[0].toLowerCase()));
+            const container = document.getElementById('clientContent');
+            if (!clientProjects.length) {
+                container.innerHTML = `<p>No projects found for ${email}. <br /> <a href="#contact" onclick="closeClientPortal()">Contact us</a> to start your project.</p>`;
+                return;
+            }
+            let html = `<h3>Welcome, ${email}</h3><p>Your projects:</p>`;
+            clientProjects.forEach(p => {
+                html += `
+                    <div style="background:var(--bg-card);border:2px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;">
+                        <h4>${p.clientName} - ${p.type}</h4>
+                        <p>Status: <strong>${p.status}</strong></p>
+                        <p>Date: ${p.date}</p>
+                        ${p.deliverables ? `<p>Deliverables: <a href="#" onclick="alert('Gallery link: ${p.deliverables}')">View Gallery</a></p>` : ''}
+                        ${p.feedback ? `<p>Your feedback: ${p.feedback}</p>` : ''}
+                        ${!p.feedback ? `<button class="btn btn-gold" onclick="giveFeedback(${p.id})">Give Feedback</button>` : ''}
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function giveFeedback(projectId) {
+            const rating = prompt('Rate this project (1-5):');
+            if (rating && !isNaN(rating) && rating >=1 && rating <=5) {
+                const comment = prompt('Your comment:');
+                const data = loadData();
+                const project = data.projects.find(p => p.id === projectId);
+                if (project) {
+                    project.feedback = comment || 'No comment';
+                    data.feedbacks.push({ projectId, rating: parseInt(rating), comment: comment || '', client: project.clientName });
+                    saveData(data);
+                    renderClientDashboard(currentClient);
+                    renderAll();
+                }
+            }
+        }
+
+        function closeClientPortal() {
+            document.getElementById('clientPortal').style.display = 'none';
+            document.getElementById('mainSite').style.display = 'block';
+            currentClient = null;
+        }
+        document.getElementById('clientLogout').addEventListener('click', closeClientPortal);
+
+        // ============================================================
+        //  ADMIN – Ctrl+Shift+A to toggle
+        // ============================================================
+        const ADMIN_CREDENTIALS = { username: 'admin', password: 'amingos123' };
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                e.preventDefault();
+                // If admin is already open, close it
+                const panel = document.getElementById('adminPanel');
+                if (panel.classList.contains('active')) {
+                    panel.classList.remove('active');
+                    panel.style.display = 'none';
+                    document.getElementById('mainSite').style.display = 'block';
+                    return;
+                }
+                // else ask for credentials
+                const username = prompt('Admin Username:');
+                if (username !== ADMIN_CREDENTIALS.username) { alert('Invalid username'); return; }
+                const password = prompt('Admin Password:');
+                if (password !== ADMIN_CREDENTIALS.password) { alert('Invalid password'); return; }
+                showAdminPanel();
+            }
+        });
+
+        function showAdminPanel() {
+            document.getElementById('mainSite').style.display = 'none';
+            document.getElementById('clientPortal').style.display = 'none';
+            document.getElementById('adminPanel').style.display = 'block';
+            document.getElementById('adminPanel').classList.add('active');
+            renderAdmin();
+        }
+
+        document.getElementById('adminLogout').addEventListener('click', function() {
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('mainSite').style.display = 'block';
+        });
+
+        // ============================================================
+        //  SCROLL REVEAL OBSERVER
+        // ============================================================
+        function observeReveals() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+        }
+
+        // ============================================================
+        //  THEME TOGGLE
+        // ============================================================
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+
+        // ============================================================
+        //  MOBILE MENU
+        // ============================================================
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ============================================================
+        //  CONTACT FORM
+        // ============================================================
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            btn.style.background = '#2e7d32';
+            setTimeout(() => {
+                btn.innerHTML = orig;
+                btn.style.background = '';
+                this.reset();
+            }, 2500);
+        });
+
+        // ============================================================
+        //  NAVBAR SHADOW
+        // ============================================================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.style.boxShadow = window.scrollY > 60 ? '0 4px 40px rgba(0,0,0,0.08)' : 'none';
+        });
+
+        // ============================================================
+        //  SMOOTH ANCHOR SCROLL
+        // ============================================================
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+
+        // ============================================================
+        //  INIT
+        // ============================================================
+        renderAll();
+        observeReveals();
+
+        document.getElementById('homeLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('clientPortal').style.display = 'none';
+            document.getElementById('mainSite').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        console.log('🚀 Amingos Production – fully loaded!');
+        console.log('🔐 Admin: press Ctrl+Shift+A (default: admin / amingos123)');
+        console.log('📱 Client portal: click "Client" in nav.');
+    </script>
+</body>
+</html>
