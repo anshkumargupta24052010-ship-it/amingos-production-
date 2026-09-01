@@ -1,68 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amingos Production — Premium Studio</title>
-    <!-- Modern font stack: Inter + Playfair Display -->
+    <title>Amingos Production — Book Appointment</title>
+    <!-- Modern Fonts: Outfit + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* ============================================================
-           THEME VARIABLES (modern palette)
+           THEME — Dark Navy + Electric Cyan / Light Sky
            ============================================================ */
         :root {
-            --bg-primary: #f2f0ed;
-            --bg-secondary: #e8e5e0;
-            --bg-card: rgba(255, 255, 255, 0.6);
-            --bg-hero: #ddd9d4;
-            --bg-nav: rgba(242, 240, 237, 0.88);
-            --text-primary: #0a0a0a;
-            --text-secondary: #1e1e1e;
-            --text-muted: #555;
-            --accent: #080808;
-            --border: rgba(0, 0, 0, 0.08);
-            --shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
-            --shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.15);
-            --gold: #b8860b;
-            --gold-light: #d4a030;
-            --gold-glow: rgba(184, 134, 11, 0.2);
-            --gold-glow-strong: rgba(184, 134, 11, 0.4);
-            --radius: 16px;
-            --transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            --font-heading: 'Playfair Display', serif;
+            --bg-primary: #0B0D15;
+            --bg-secondary: #131724;
+            --bg-card: #1A202E;
+            --bg-hero: #0B0D15;
+            --bg-nav: rgba(11, 13, 21, 0.88);
+            --text-primary: #E2E8F0;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent: #00E5FF;
+            --accent-light: #4DF8FF;
+            --accent-dark: #0099CC;
+            --accent-glow: rgba(0, 229, 255, 0.15);
+            --accent-glow-strong: rgba(0, 229, 255, 0.3);
+            --accent-secondary: #7C3AED;
+            --accent-secondary-glow: rgba(124, 58, 237, 0.15);
+            --border: #293241;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+            --shadow-3d: 0 4px 20px rgba(0, 0, 0, 0.2);
+            --radius: 14px;
+            --radius-sm: 10px;
+            --transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            --font-heading: 'Outfit', sans-serif;
             --font-body: 'Inter', sans-serif;
-            --glass-bg: rgba(255, 255, 255, 0.4);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-bg: rgba(26, 32, 46, 0.75);
+            --glass-border: rgba(41, 50, 65, 0.5);
         }
-        [data-theme="dark"] {
-            --bg-primary: #0a0a16;
-            --bg-secondary: #12122a;
-            --bg-card: rgba(28, 28, 54, 0.65);
-            --bg-hero: #0a0a16;
-            --bg-nav: rgba(10, 10, 22, 0.92);
-            --text-primary: #f2ede4;
-            --text-secondary: #d5cfc4;
-            --text-muted: #a8a09a;
-            --accent: #d4a030;
-            --border: rgba(255, 255, 255, 0.06);
-            --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            --shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.7);
-            --gold: #d4a030;
-            --gold-light: #e8c85a;
-            --gold-glow: rgba(212, 160, 48, 0.25);
-            --gold-glow-strong: rgba(212, 160, 48, 0.5);
-            --glass-bg: rgba(20, 20, 42, 0.5);
-            --glass-border: rgba(255, 255, 255, 0.05);
+
+        [data-theme="light"] {
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #F1F5F9;
+            --bg-card: #FFFFFF;
+            --bg-hero: #F8FAFC;
+            --bg-nav: rgba(248, 250, 252, 0.88);
+            --text-primary: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --accent: #0EA5E9;
+            --accent-light: #38BDF8;
+            --accent-dark: #0284C7;
+            --accent-glow: rgba(14, 165, 233, 0.12);
+            --accent-glow-strong: rgba(14, 165, 233, 0.25);
+            --accent-secondary: #8B5CF6;
+            --accent-secondary-glow: rgba(139, 92, 246, 0.12);
+            --border: #E2E8F0;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.08);
+            --shadow-3d: 0 4px 20px rgba(0, 0, 0, 0.02);
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(226, 232, 240, 0.5);
         }
 
         /* ============================================================
            RESET & BASE
            ============================================================ */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
         body {
             font-family: var(--font-body);
             background: var(--bg-primary);
@@ -72,976 +87,1831 @@
             overflow-x: hidden;
             cursor: none;
         }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 10px;
+        }
 
         /* ============================================================
-           CUSTOM CURSOR
+           SOFT GLOW CURSOR
            ============================================================ */
-        .cursor-dot {
-            position: fixed; width: 6px; height: 6px; border-radius: 50%;
-            background: var(--accent); pointer-events: none; z-index: 99999;
-            transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s;
-            mix-blend-mode: difference;
+        .cursor-glow {
+            position: fixed;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s, opacity 0.3s;
+            opacity: 0;
+            mix-blend-mode: screen;
         }
-        .cursor-ring {
-            position: fixed; width: 40px; height: 40px; border-radius: 50%;
-            border: 2px solid var(--gold); pointer-events: none; z-index: 99998;
-            transform: translate(-50%, -50%); transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+        [data-theme="light"] .cursor-glow {
+            mix-blend-mode: multiply;
+        }
+        .cursor-glow.active {
             opacity: 0.6;
         }
-        .cursor-ring.hover { width: 70px; height: 70px; border-color: var(--gold-light); opacity: 1; background: var(--gold-glow); }
-        [data-theme="dark"] .cursor-dot { background: var(--gold); }
-        [data-theme="dark"] .cursor-ring { border-color: var(--gold-light); }
+        .cursor-glow.hover {
+            width: 260px;
+            height: 260px;
+            opacity: 0.8;
+        }
 
         /* ============================================================
            SCROLL PROGRESS
            ============================================================ */
         .scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-            z-index: 10000; width: 0%; transition: width 0.1s;
-            box-shadow: 0 0 30px var(--gold-glow-strong);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2.5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            z-index: 10000;
+            width: 0%;
+            transition: width 0.1s;
+            box-shadow: 0 0 20px var(--accent-glow);
         }
 
         /* ============================================================
            UTILITY
            ============================================================ */
         .section-label {
-            font-size: 0.6rem; letter-spacing: 8px; text-transform: uppercase;
-            font-weight: 700; color: var(--accent); margin-bottom: 8px;
-            display: inline-block; position: relative;
-            font-family: var(--font-body);
+            font-size: 0.6rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: inline-block;
+            position: relative;
         }
-        [data-theme="dark"] .section-label { color: var(--gold); }
         .section-label::after {
-            content: ''; display: block; width: 40px; height: 2px;
-            background: var(--accent); margin-top: 6px; border-radius: 4px;
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+            margin-top: 6px;
+            border-radius: 4px;
         }
-        [data-theme="dark"] .section-label::after { background: var(--gold); }
 
         .section-title {
             font-family: var(--font-heading);
-            font-size: clamp(2.8rem, 7vw, 5rem);
-            font-weight: 800; line-height: 1.02; margin-bottom: 16px;
+            font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
         .section-title .highlight {
-            background: linear-gradient(135deg, var(--accent), var(--gold-light));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; position: relative;
-        }
-        [data-theme="dark"] .section-title .highlight {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        .section-title .highlight::after {
-            content: ''; position: absolute; bottom: 2px; left: 0;
-            width: 100%; height: 10px; background: var(--gold-glow);
-            border-radius: 4px; z-index: -1; -webkit-text-fill-color: initial;
+            position: relative;
         }
 
         .section-sub {
-            font-size: 1.1rem; color: var(--text-secondary);
-            max-width: 520px; margin-bottom: 32px;
-            font-family: var(--font-body);
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 32px;
+            font-weight: 400;
         }
 
         .btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 16px 38px; border-radius: 50px;
-            font-weight: 700; font-size: 0.95rem;
-            border: none; cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             font-family: var(--font-body);
-            background: var(--accent); color: var(--bg-primary);
-            position: relative; overflow: hidden;
+            background: var(--accent);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
         }
         .btn::before {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, var(--gold-glow-strong), transparent);
-            opacity: 0; transition: opacity 0.5s;
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent-secondary));
+            opacity: 0;
+            transition: opacity 0.4s;
         }
-        .btn:hover::before { opacity: 0.3; }
+        .btn:hover::before {
+            opacity: 1;
+        }
         .btn:hover {
-            transform: translateY(-5px) scale(1.04);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px var(--accent-glow-strong);
+        }
+        .btn span {
+            position: relative;
+            z-index: 1;
         }
         .btn-outline {
-            background: transparent; color: var(--accent);
+            background: transparent;
+            color: var(--accent);
             border: 2px solid var(--accent);
         }
-        .btn-outline::before { display: none; }
-        .btn-outline:hover { background: var(--accent); color: var(--bg-primary); }
-        .btn-gold {
-            background: var(--gold); color: #0a0a0f;
+        .btn-outline::before {
+            display: none;
         }
-        .btn-gold:hover { background: var(--gold-light); box-shadow: 0 20px 60px var(--gold-glow-strong); transform: translateY(-5px) scale(1.05); }
+        .btn-outline:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 12px 40px var(--accent-glow-strong);
+        }
 
         /* ============================================================
            GLASS CARD
            ============================================================ */
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
             box-shadow: var(--shadow);
             border-radius: var(--radius);
             transition: all var(--transition);
         }
         .glass-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--shadow-hover), 0 0 60px var(--gold-glow);
-            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
         }
 
         /* ============================================================
            NAVBAR
            ============================================================ */
         .navbar {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-            padding: 8px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 0;
             background: var(--bg-nav);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             transition: all 0.4s;
         }
-        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         .nav-logo {
             font-family: var(--font-heading);
-            font-size: 1.5rem; font-weight: 800;
-            display: flex; align-items: center; gap: 8px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.5px;
         }
-        .nav-logo span { color: var(--accent); }
-        [data-theme="dark"] .nav-logo span { color: var(--gold); }
+        .nav-logo span {
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .nav-logo i {
-            font-size: 1.2rem; color: var(--accent);
+            font-size: 1.1rem;
+            color: var(--accent);
             animation: pulse-cam 3s ease-in-out infinite;
         }
-        [data-theme="dark"] .nav-logo i { color: var(--gold); }
         @keyframes pulse-cam {
-            0%,100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.15) rotate(8deg); }
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(6deg);
+            }
         }
 
         .nav-links {
-            display: flex; align-items: center; gap: 32px; list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
         }
         .nav-links a {
-            font-size: 0.75rem; font-weight: 700;
-            color: var(--text-secondary); transition: color 0.3s;
-            position: relative; letter-spacing: 0.5px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+            position: relative;
+            letter-spacing: 0.3px;
             text-transform: uppercase;
-            font-family: var(--font-body);
+            white-space: nowrap;
         }
         .nav-links a::after {
-            content: ''; position: absolute; bottom: -4px; left: 50%;
-            width: 0; height: 2px; background: var(--accent);
-            transition: all 0.4s; border-radius: 4px;
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s;
+            border-radius: 4px;
             transform: translateX(-50%);
         }
-        [data-theme="dark"] .nav-links a::after { background: var(--gold); }
-        .nav-links a:hover { color: var(--accent); }
-        [data-theme="dark"] .nav-links a:hover { color: var(--gold); }
-        .nav-links a:hover::after { width: 80%; }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        .nav-links a:hover::after {
+            width: 60%;
+        }
 
-        .nav-actions { display: flex; align-items: center; gap: 12px; }
-        .theme-toggle {
-            width: 42px; height: 42px; border-radius: 50%;
-            border: 2px solid var(--border);
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            color: var(--text-primary); font-size: 1rem;
-            cursor: pointer; transition: all 0.5s;
-            display: flex; align-items: center; justify-content: center;
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
         }
-        .theme-toggle:hover {
-            border-color: var(--accent); transform: rotate(40deg) scale(1.08);
-            box-shadow: 0 0 40px var(--gold-glow);
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
-        [data-theme="dark"] .theme-toggle:hover { border-color: var(--gold); }
-        .theme-toggle .sun { display: none; }
-        .theme-toggle .moon { display: block; }
-        [data-theme="dark"] .theme-toggle .sun { display: block; }
-        [data-theme="dark"] .theme-toggle .moon { display: none; }
-
-        .hamburger {
-            display: none; flex-direction: column; gap: 4px;
-            cursor: pointer; background: none; border: none; padding: 4px;
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 8px 0;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 1001;
+            box-shadow: var(--shadow);
+            margin-top: 4px;
         }
-        .hamburger span {
-            display: block; width: 26px; height: 2px;
-            background: var(--text-primary); border-radius: 4px;
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nav-dropdown-menu li {
+            list-style: none;
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
             transition: all 0.3s;
         }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px,4px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; transform: scale(0); }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
+        .nav-dropdown-menu a:hover {
+            color: var(--accent);
+            background: var(--bg-secondary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            transform: rotate(30deg) scale(1.05);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+        .theme-toggle .sun {
+            display: none;
+        }
+        .theme-toggle .moon {
+            display: block;
+        }
+        [data-theme="light"] .theme-toggle .sun {
+            display: block;
+        }
+        [data-theme="light"] .theme-toggle .moon {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
 
         /* ============================================================
            HERO
            ============================================================ */
         .hero {
-            min-height: 100vh; display: flex; align-items: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             padding: 140px 0 80px;
             background: var(--bg-hero);
-            position: relative; overflow: hidden;
-            perspective: 1000px;
+            position: relative;
+            overflow: hidden;
         }
         .hero::before {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, var(--gold-glow), transparent 50%, var(--gold-glow));
-            background-size: 300% 300%;
-            animation: gradientShift 8s ease-in-out infinite alternate;
-            opacity: 0.25;
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, var(--accent-glow) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, var(--accent-secondary-glow) 0%, transparent 50%);
+            opacity: 0.5;
+            pointer-events: none;
         }
-        [data-theme="dark"] .hero::before { opacity: 0.4; }
-        @keyframes gradientShift {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
-        }
-
-        .hero-3d-container {
-            transform-style: preserve-3d;
-            transition: transform 0.1s;
+        [data-theme="light"] .hero::before {
+            opacity: 0.3;
         }
 
         .hero-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-            align-items: center; position: relative; z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
         }
         .hero-content .badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 6px 18px; border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 50px;
             background: var(--glass-bg);
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            font-size: 0.65rem; font-weight: 700;
-            color: var(--accent); margin-bottom: 20px;
-            letter-spacing: 1px;
-            animation: badgePulse 3s ease-in-out infinite;
-            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-3d);
         }
-        [data-theme="dark"] .hero-content .badge { color: var(--gold); }
-        @keyframes badgePulse {
-            0%,100% { box-shadow: 0 0 0 0 var(--gold-glow); }
-            50% { box-shadow: 0 0 30px 6px var(--gold-glow); }
-        }
-
         .hero-content h1 {
             font-family: var(--font-heading);
-            font-size: clamp(3.2rem, 9vw, 5.8rem);
-            font-weight: 800; line-height: 1.0; margin-bottom: 16px;
+            font-size: clamp(3rem, 8vw, 5.2rem);
+            font-weight: 800;
+            line-height: 1.02;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
         }
         .hero-content h1 .highlight {
-            background: linear-gradient(135deg, var(--accent), var(--gold-light));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
-            position: relative; display: inline-block;
+            position: relative;
+            display: inline-block;
         }
-        [data-theme="dark"] .hero-content h1 .highlight {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero-content h1 .highlight::after {
-            content: ''; position: absolute; bottom: 4px; left: 0;
-            width: 100%; height: 12px; background: var(--gold-glow);
-            border-radius: 4px; z-index: -1; -webkit-text-fill-color: initial;
-        }
-
-        .typing-wrapper {
-            display: inline-block; position: relative;
-        }
-        .typing-wrapper .cursor-blink {
-            display: inline-block; width: 3px; height: 1.1em;
-            background: var(--accent); margin-left: 2px;
-            animation: blink 0.8s step-end infinite;
-            vertical-align: text-bottom;
-        }
-        [data-theme="dark"] .typing-wrapper .cursor-blink { background: var(--gold); }
-        @keyframes blink {
-            0%,100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
         .hero-content p {
-            font-size: 1.15rem; color: var(--text-secondary);
-            max-width: 440px; margin-bottom: 32px; line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 440px;
+            margin-bottom: 28px;
+            line-height: 1.8;
         }
-        .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
         .hero-stats {
-            display: flex; gap: 48px; margin-top: 40px;
-            padding-top: 24px; border-top: 2px solid var(--border);
+            display: flex;
+            gap: 48px;
+            margin-top: 36px;
+            padding-top: 24px;
+            border-top: 2px solid var(--border);
         }
         .hero-stats .stat h3 {
             font-family: var(--font-heading);
-            font-size: 2.4rem; color: var(--accent);
+            font-size: 2rem;
+            color: var(--accent);
             font-weight: 800;
         }
-        [data-theme="dark"] .hero-stats .stat h3 { color: var(--gold); }
         .hero-stats .stat p {
-            font-size: 0.8rem; color: var(--text-muted);
-            font-weight: 500; letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         .hero-visual {
-            display: flex; justify-content: center; align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
         }
-        .hero-visual .camera-frame {
-            width: 100%; max-width: 460px; aspect-ratio: 1/1;
-            border-radius: 50%;
-            background: var(--glass-bg);
-            backdrop-filter: blur(30px);
-            border: 2px solid var(--glass-border);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 6.5rem; color: var(--accent);
-            box-shadow: var(--shadow), 0 0 80px var(--gold-glow);
-            transition: all 0.7s cubic-bezier(0.34,1.56,0.64,1);
+        .hero-visual .video-container {
+            width: 100%;
+            max-width: 520px;
+            aspect-ratio: 16/9;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-hover);
             position: relative;
+            cursor: pointer;
+            transition: all 0.5s;
         }
-        [data-theme="dark"] .hero-visual .camera-frame { color: var(--gold); }
-        .hero-visual .camera-frame:hover {
-            transform: scale(1.06) rotate(4deg);
-            box-shadow: var(--shadow-hover), 0 0 120px var(--gold-glow-strong);
-            border-color: var(--gold);
+        .hero-visual .video-container:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover), 0 0 40px var(--accent-glow);
         }
-        .hero-visual .camera-frame i {
-            opacity: 0.2; transition: all 0.7s;
+        .hero-visual .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .hero-visual .camera-frame:hover i {
-            opacity: 0.6; transform: scale(1.1) rotate(-8deg);
+        .hero-visual .video-container .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.4s;
         }
-
-        .hero-visual .ring {
-            position: absolute; width: 130%; height: 130%; border-radius: 50%;
-            border: 1.5px solid var(--border);
-            animation: ringSpin 25s linear infinite;
-            pointer-events: none;
+        .hero-visual .video-container .play-overlay i {
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.8;
+            transition: all 0.4s;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
-        .hero-visual .ring:nth-child(2) {
-            width: 160%; height: 160%; animation-direction: reverse;
-            animation-duration: 35s; border-color: var(--gold);
-            opacity: 0.3;
-        }
-        .hero-visual .ring:nth-child(3) {
-            width: 200%; height: 200%; animation-duration: 45s;
-            border-color: var(--gold-light); opacity: 0.15;
-            border-style: dashed;
-        }
-        @keyframes ringSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .hero .wow-float {
-            position: absolute; bottom: 10%; right: 5%;
-            font-family: var(--font-heading);
-            font-size: 1.8rem; font-weight: 700;
-            color: var(--gold); opacity: 0.15;
-            animation: floatWow 4s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 1;
-        }
-        @keyframes floatWow {
-            0%,100% { transform: translateY(0) rotate(-3deg); }
-            50% { transform: translateY(-20px) rotate(3deg); }
+        .hero-visual .video-container:hover .play-overlay i {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         /* ============================================================
            SECTIONS
            ============================================================ */
-        section { padding: 100px 0; transition: background 0.6s; }
-        section:nth-child(even) { background: var(--bg-secondary); }
+        section {
+            padding: 90px 0;
+            transition: background 0.6s;
+        }
+        section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
 
         /* ============================================================
            ABOUT
            ============================================================ */
         .about-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
             align-items: center;
         }
         .about-image {
-            border-radius: var(--radius); background: var(--bg-card);
-            aspect-ratio: 4/3; display: flex; align-items: center;
-            justify-content: center; font-size: 5rem; color: var(--accent);
-            border: 2px solid var(--border); transition: all 0.6s;
-            transform-style: preserve-3d; perspective: 800px;
+            border-radius: var(--radius);
+            background: var(--bg-card);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            color: var(--accent);
+            border: 1px solid var(--border);
+            transition: all 0.5s;
+            box-shadow: var(--shadow-3d);
         }
-        [data-theme="dark"] .about-image { color: var(--gold); }
         .about-image:hover {
-            transform: rotateY(6deg) rotateX(4deg) scale(1.03);
-            border-color: var(--accent); box-shadow: var(--shadow-hover);
+            transform: scale(1.02);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
-        [data-theme="dark"] .about-image:hover { border-color: var(--gold); }
-        .about-image i { opacity: 0.15; transition: 0.4s; }
-        .about-image:hover i { opacity: 0.3; transform: scale(1.05); }
-
+        .about-image i {
+            opacity: 0.15;
+            transition: 0.4s;
+        }
+        .about-image:hover i {
+            opacity: 0.3;
+            transform: scale(1.05);
+        }
         .about-features {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
             margin-top: 20px;
         }
         .about-features .feat {
-            display: flex; align-items: center; gap: 10px;
-            font-weight: 600; padding: 10px 16px;
-            border-radius: 10px;
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
         .about-features .feat:hover {
-            transform: translateX(6px); border-color: var(--gold);
-            box-shadow: 0 0 40px var(--gold-glow);
+            border-color: var(--accent);
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px var(--accent-glow);
         }
-        .about-features .feat i { color: var(--accent); }
-        [data-theme="dark"] .about-features .feat i { color: var(--gold); }
+        .about-features .feat i {
+            color: var(--accent);
+        }
 
         /* ============================================================
-           SERVICES - FLIP CARDS
+           SERVICES
            ============================================================ */
         .services-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-            gap: 24px; margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+            margin-top: 12px;
         }
-        .flip-card {
-            perspective: 1000px; height: 280px; cursor: default;
+        .service-card {
+            padding: 32px 24px;
+            text-align: center;
+            cursor: default;
+            transition: all 0.4s;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-3d);
         }
-        .flip-card-inner {
-            position: relative; width: 100%; height: 100%;
-            transition: transform 0.8s cubic-bezier(0.23,1,0.32,1);
-            transform-style: preserve-3d;
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
-        .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
-        .flip-card-front, .flip-card-back {
-            position: absolute; width: 100%; height: 100%;
-            backface-visibility: hidden; border-radius: var(--radius);
-            display: flex; flex-direction: column; align-items: center;
-            justify-content: center; padding: 24px; text-align: center;
-            background: var(--glass-bg); backdrop-filter: blur(24px);
-            border: 1px solid var(--glass-border);
-            box-shadow: var(--shadow);
+        .service-card .icon {
+            font-size: 2.4rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: inline-block;
+            transition: all 0.4s;
         }
-        .flip-card-front .icon {
-            font-size: 2.8rem; color: var(--accent); margin-bottom: 12px;
+        .service-card:hover .icon {
+            transform: scale(1.1) rotate(4deg);
         }
-        [data-theme="dark"] .flip-card-front .icon { color: var(--gold); }
-        .flip-card-front h3 {
-            font-family: var(--font-heading); font-size: 1.1rem;
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
-        .flip-card-back {
-            transform: rotateY(180deg); background: var(--accent);
-            color: var(--bg-primary); border-color: var(--gold);
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
-        [data-theme="dark"] .flip-card-back { background: var(--gold); color: #0a0a0f; }
-        .flip-card-back p { font-size: 0.9rem; opacity: 0.85; }
-        .flip-card-back .icon-back { font-size: 2rem; margin-bottom: 10px; opacity: 0.6; }
 
         /* ============================================================
-           PORTFOLIO - MASONRY
+           PORTFOLIO — Bento Grid
            ============================================================ */
         .portfolio-grid {
-            display: grid; grid-template-columns: repeat(4,1fr);
-            gap: 16px; margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 12px;
         }
         .portfolio-item {
-            border-radius: var(--radius); position: relative;
-            overflow: hidden; cursor: pointer;
-            transition: all 0.5s; border: 2px solid var(--border);
+            border-radius: var(--radius);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s;
+            border: 1px solid var(--border);
             background: var(--bg-card);
+            box-shadow: var(--shadow-3d);
+            aspect-ratio: 4/3;
         }
-        .portfolio-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-        .portfolio-item:nth-child(4) { grid-column: span 2; }
-        .portfolio-item:nth-child(6) { grid-column: span 2; }
+        .portfolio-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .portfolio-item:nth-child(4) {
+            grid-column: span 2;
+        }
+        .portfolio-item:nth-child(6) {
+            grid-column: span 2;
+        }
 
         .portfolio-item img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: all 0.6s; display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s;
+            display: block;
         }
-        .portfolio-item:hover img { transform: scale(1.08); }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
         .portfolio-item .overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 60%);
-            display: flex; flex-direction: column; justify-content: flex-end;
-            padding: 20px; opacity: 0; transition: all 0.5s;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: all 0.5s;
             color: #fff;
         }
-        .portfolio-item:hover .overlay { opacity: 1; }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
         .portfolio-item .overlay h4 {
-            font-family: var(--font-heading); font-size: 1.1rem;
-            transform: translateY(20px); transition: all 0.5s;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            transform: translateY(16px);
+            transition: all 0.5s;
         }
         .portfolio-item .overlay p {
-            font-size: 0.8rem; opacity: 0.8;
-            transform: translateY(20px); transition: all 0.5s 0.1s;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            transform: translateY(16px);
+            transition: all 0.5s 0.05s;
         }
         .portfolio-item:hover .overlay h4,
-        .portfolio-item:hover .overlay p { transform: translateY(0); }
-        .portfolio-item .play-badge {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%,-50%);
-            font-size: 3rem; color: var(--gold); opacity: 0.5;
-            transition: all 0.5s;
-        }
-        .portfolio-item:hover .play-badge {
-            opacity: 0.9; transform: translate(-50%,-50%) scale(1.2);
+        .portfolio-item:hover .overlay p {
+            transform: translateY(0);
         }
 
         /* ============================================================
-           TEAM
+           TEAM — Grayscale to Color
            ============================================================ */
         .team-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            gap: 24px; margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 12px;
         }
         .team-card {
-            padding: 24px 16px; text-align: center; cursor: pointer;
+            padding: 24px 16px;
+            text-align: center;
+            cursor: pointer;
             transition: all 0.5s;
-            transform-style: preserve-3d; perspective: 600px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-3d);
         }
         .team-card:hover {
-            transform: translateY(-10px) rotateX(4deg);
-            border-color: var(--gold);
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
         .team-card .avatar {
-            width: 90px; height: 90px; border-radius: 50%;
-            margin: 0 auto 12px; overflow: hidden;
-            border: 3px solid var(--accent); transition: 0.5s;
-            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            overflow: hidden;
+            border: 3px solid var(--border);
+            transition: all 0.5s;
+            filter: grayscale(100%);
         }
-        [data-theme="dark"] .team-card .avatar { border-color: var(--gold); }
         .team-card:hover .avatar {
-            transform: scale(1.08);
-            box-shadow: 0 0 50px var(--gold-glow-strong);
-            border-color: var(--gold);
+            filter: grayscale(0%);
+            border-color: var(--accent);
+            box-shadow: 0 0 40px var(--accent-glow);
         }
-        .team-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .team-card h4 { font-family: var(--font-heading); font-size: 1rem; }
+        .team-card .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+        }
         .team-card .role {
-            color: var(--accent); font-weight: 700; font-size: 0.75rem;
-            letter-spacing: 0.5px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
         }
-        [data-theme="dark"] .team-card .role { color: var(--gold); }
-        .team-card .bio { color: var(--text-muted); font-size: 0.8rem; margin: 4px 0 0; }
+        .team-card .bio {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 4px 0 0;
+        }
 
         /* ============================================================
-           BTS
+           BTS — Timeline
            ============================================================ */
         .bts-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            gap: 20px; margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 12px;
         }
         .bts-item {
-            border-radius: var(--radius); aspect-ratio: 4/3;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2.8rem; color: var(--accent);
-            transition: all 0.5s; position: relative; cursor: default;
-        }
-        [data-theme="dark"] .bts-item { color: var(--gold); }
-        .bts-item:hover {
-            transform: scale(1.05); border-color: var(--gold);
-            box-shadow: 0 20px 60px var(--gold-glow-strong);
-        }
-        .bts-item i { opacity: 0.15; transition: 0.5s; }
-        .bts-item:hover i { opacity: 0.4; transform: scale(1.1) rotate(-6deg); }
-        .bts-item .bts-label {
-            position: absolute; bottom: 12px; left: 12px; right: 12px;
-            background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
-            padding: 8px 14px; border-radius: 8px; color: #fff;
-            font-weight: 600; font-size: 0.7rem;
-            opacity: 0; transform: translateY(10px);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
             transition: all 0.5s;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-3d);
+            position: relative;
         }
-        .bts-item:hover .bts-label { opacity: 1; transform: translateY(0); }
+        .bts-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
+        }
+        .bts-item .step-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.15;
+            position: absolute;
+            top: 8px;
+            right: 14px;
+            line-height: 1;
+        }
+        .bts-item i {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: all 0.4s;
+        }
+        .bts-item:hover i {
+            transform: scale(1.1) rotate(-4deg);
+        }
+        .bts-item h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .bts-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
 
         /* ============================================================
-           TESTIMONIALS - CAROUSEL
+           TESTIMONIALS — Carousel
            ============================================================ */
         .testimonial-carousel {
-            position: relative; overflow: hidden;
+            position: relative;
+            overflow: hidden;
         }
         .testimonial-track {
-            display: flex; transition: transform 0.6s cubic-bezier(0.23,1,0.32,1);
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .testimonial-card {
-            flex: 0 0 33.333%; padding: 0 12px;
+            flex: 0 0 33.333%;
+            padding: 0 12px;
             min-width: 0;
         }
         .testimonial-card .inner {
-            background: var(--glass-bg);
-            backdrop-filter: blur(24px);
-            border: 1px solid var(--glass-border);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 28px 24px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-3d);
             transition: all 0.4s;
             height: 100%;
         }
         .testimonial-card .inner:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: var(--gold);
-            box-shadow: var(--shadow-hover), 0 0 40px var(--gold-glow);
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
         .testimonial-card .stars {
-            color: var(--accent); margin-bottom: 8px; letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
         }
-        [data-theme="dark"] .testimonial-card .stars { color: var(--gold); }
         .testimonial-card blockquote {
-            font-style: italic; color: var(--text-secondary);
-            margin-bottom: 12px; font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
         }
         .testimonial-card .client {
-            display: flex; align-items: center; gap: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         .testimonial-card .client .initials {
-            width: 40px; height: 40px; border-radius: 50%;
-            background: var(--accent); color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 800; flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
         }
-        [data-theme="dark"] .testimonial-card .client .initials { background: var(--gold); }
-        .testimonial-card .client .name { font-weight: 700; }
-        .testimonial-card .client .title { font-size: 0.75rem; color: var(--text-muted); }
+        .testimonial-card .client .name {
+            font-weight: 600;
+        }
+        .testimonial-card .client .title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
 
         .carousel-controls {
-            display: flex; justify-content: center; gap: 16px; margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 24px;
         }
         .carousel-btn {
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 50%; width: 44px; height: 44px;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; transition: all 0.3s;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
             color: var(--text-primary);
+            box-shadow: var(--shadow-3d);
         }
         .carousel-btn:hover {
-            border-color: var(--gold); box-shadow: 0 0 30px var(--gold-glow);
+            border-color: var(--accent);
+            box-shadow: 0 0 30px var(--accent-glow);
             transform: scale(1.05);
         }
 
         /* ============================================================
-           FEEDBACK WRITING SECTION (with extra animations)
+           FEEDBACK — Dynamic Stars + Confetti
            ============================================================ */
+        .feedback-form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 44px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-3d);
+            transition: all 0.4s;
+        }
+        .feedback-form:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
         .star-rating {
-            display: flex; justify-content: center; gap: 12px; font-size: 2.5rem; cursor: pointer;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            font-size: 2.6rem;
+            cursor: pointer;
+            margin-bottom: 8px;
         }
         .star-rating i {
-            color: var(--text-muted); transition: all 0.3s;
-        }
-        .star-rating i.active, .star-rating i:hover {
-            color: var(--gold); transform: scale(1.15);
-        }
-        .star-rating i:hover ~ i {
             color: var(--text-muted);
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+        .star-rating i.active,
+        .star-rating i:hover {
+            color: var(--accent);
+            transform: scale(1.2);
+        }
+        .star-rating i:hover~i {
+            color: var(--text-muted);
+        }
+
+        .star-rating-label {
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            min-height: 28px;
+            transition: all 0.3s;
         }
 
         .feedback-form input,
         .feedback-form textarea {
-            width: 100%; padding: 14px 18px; border-radius: 10px;
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
             border: 2px solid var(--border);
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            color: var(--text-primary); font-family: var(--font-body);
-            font-size: 0.95rem; transition: 0.4s; outline: none;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            outline: none;
         }
         .feedback-form input:focus,
         .feedback-form textarea:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 6px var(--gold-glow);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+            background: var(--bg-card);
+        }
+        .feedback-form textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+        .feedback-form .btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 4px;
         }
 
-        /* Feedback success animation: scale + glow + confetti (JS handles confetti) */
         .feedback-success {
-            display: none; text-align: center; padding: 20px;
-            font-family: var(--font-heading); font-size: 1.2rem;
+            display: none;
+            text-align: center;
+            padding: 24px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
             animation: successPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .feedback-success.show {
             display: block;
         }
         .feedback-success i {
-            font-size: 2.5rem; color: var(--gold);
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            display: inline-block;
             animation: starSpin 2s linear infinite;
         }
         @keyframes successPop {
-            0% { opacity: 0; transform: scale(0.5); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 0;
+                transform: scale(0.6) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
         @keyframes starSpin {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.2); }
-            100% { transform: rotate(360deg) scale(1); }
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.15);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
         }
 
-        /* Confetti canvas */
         #confetti-canvas {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ============================================================
+           APPOINTMENT BOOKING CALENDAR (NEW)
+           ============================================================ */
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .calendar-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 24px;
+            box-shadow: var(--shadow-3d);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .calendar-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .calendar-nav {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            color: var(--text-primary);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calendar-nav:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+        .calendar-grid .day-name {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 8px 0;
+        }
+        .calendar-grid .day-cell {
+            padding: 10px 0;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+            font-weight: 500;
+            position: relative;
+        }
+        .calendar-grid .day-cell:hover:not(.empty):not(.booked) {
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+        .calendar-grid .day-cell.empty {
+            cursor: default;
+            opacity: 0.3;
+        }
+        .calendar-grid .day-cell.selected {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 30px var(--accent-glow-strong);
+        }
+        .calendar-grid .day-cell.booked {
+            color: var(--text-muted);
+            cursor: not-allowed;
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+        .calendar-grid .day-cell.booked::after {
+            content: '✕';
+            position: absolute;
+            top: 2px;
+            right: 6px;
+            font-size: 0.5rem;
+            color: #ef4444;
+        }
+        .calendar-grid .day-cell.today {
+            border: 2px solid var(--accent);
+        }
+        .calendar-grid .day-cell.has-slot::after {
+            content: '•';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent);
+            font-size: 0.6rem;
+        }
+
+        /* Time slots */
+        .time-slots {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        .time-slots h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .time-slots-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .time-slot {
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .time-slot:hover:not(.booked-slot):not(.disabled) {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+        .time-slot.selected-slot {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent-glow-strong);
+        }
+        .time-slot.booked-slot {
+            opacity: 0.4;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+        .time-slot.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .booking-form-side {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 30px;
+            box-shadow: var(--shadow-3d);
+        }
+        .booking-form-side h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        .booking-form-side p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .booking-form-side .form-group {
+            margin-bottom: 16px;
+        }
+        .booking-form-side .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .booking-form-side .form-group input,
+        .booking-form-side .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            outline: none;
+        }
+        .booking-form-side .form-group input:focus,
+        .booking-form-side .form-group select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+            background: var(--bg-card);
+        }
+        .booking-form-side .form-group input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        .booking-confirmation {
+            display: none;
+            text-align: center;
+            padding: 30px 20px;
+            animation: successPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .booking-confirmation.show {
+            display: block;
+        }
+        .booking-confirmation i {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        .booking-confirmation h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+        }
+        .booking-confirmation p {
+            color: var(--text-muted);
         }
 
         /* ============================================================
            CONTACT
            ============================================================ */
         .contact-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
         }
         .contact-info .detail {
-            display: flex; align-items: center; gap: 14px; margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
         }
         .contact-info .detail i {
-            width: 44px; height: 44px; border-radius: 50%;
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--accent); font-size: 1rem; transition: 0.4s;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1rem;
+            transition: 0.3s;
+            box-shadow: var(--shadow-3d);
         }
-        [data-theme="dark"] .contact-info .detail i { color: var(--gold); }
         .contact-info .detail:hover i {
-            border-color: var(--gold); transform: scale(1.08);
-            box-shadow: 0 0 40px var(--gold-glow);
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--accent-glow);
         }
         .contact-form {
-            display: flex; flex-direction: column; gap: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
-        .contact-form input, .contact-form textarea {
-            padding: 14px 18px; border-radius: 10px;
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
             border: 2px solid var(--border);
-            background: var(--glass-bg); backdrop-filter: blur(12px);
-            color: var(--text-primary); font-family: var(--font-body);
-            font-size: 0.95rem; transition: 0.4s; outline: none;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            outline: none;
         }
-        .contact-form input:focus, .contact-form textarea:focus {
+        .contact-form input:focus,
+        .contact-form textarea:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 6px var(--gold-glow);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+            background: var(--bg-card);
         }
-        [data-theme="dark"] .contact-form input:focus,
-        [data-theme="dark"] .contact-form textarea:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 6px var(--gold-glow);
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
         }
-        .contact-form textarea { min-height: 120px; resize: vertical; }
 
         /* ============================================================
            MAP
            ============================================================ */
         .map-container {
-            margin-top: 40px; border-radius: var(--radius);
-            overflow: hidden; border: 2px solid var(--border);
-            height: 280px; transition: 0.5s;
+            margin-top: 40px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            height: 260px;
+            transition: 0.4s;
+            box-shadow: var(--shadow-3d);
         }
         .map-container:hover {
-            border-color: var(--gold);
-            box-shadow: 0 0 50px var(--gold-glow);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
         /* ============================================================
-           FOOTER
+           FOOTER — Enhanced (NEW)
            ============================================================ */
         .footer {
-            padding: 40px 0 20px;
+            padding: 60px 0 24px;
             background: var(--bg-secondary);
-            border-top: 2px solid var(--border);
+            border-top: 1px solid var(--border);
         }
         .footer-grid {
-            display: flex; justify-content: space-between;
-            align-items: center; flex-wrap: wrap; gap: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
-        .footer-logo {
+        .footer-brand h3 {
             font-family: var(--font-heading);
-            font-size: 1.3rem; font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
-        .footer-logo span { color: var(--accent); }
-        [data-theme="dark"] .footer-logo span { color: var(--gold); }
-        .footer-social { display: flex; gap: 10px; }
-        .footer-social a {
-            width: 40px; height: 40px; border-radius: 50%;
-            border: 2px solid var(--border); display: flex;
-            align-items: center; justify-content: center;
-            color: var(--text-muted); transition: all 0.4s;
-        }
-        .footer-social a:hover {
-            border-color: var(--accent); color: var(--accent);
-            transform: translateY(-5px) scale(1.08);
-            box-shadow: 0 10px 30px var(--gold-glow);
-        }
-        [data-theme="dark"] .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
-        .footer-copy {
-            width: 100%; text-align: center; margin-top: 20px;
-            padding-top: 20px; border-top: 2px solid var(--border);
-            font-size: 0.8rem; color: var(--text-muted);
-        }
-        .footer-copy i {
+        .footer-brand h3 span {
             color: var(--accent);
-            animation: heartBeat 2s ease-in-out infinite;
-            display: inline-block;
         }
-        [data-theme="dark"] .footer-copy i { color: var(--gold); }
-        @keyframes heartBeat {
-            0%,100% { transform: scale(1); }
-            50% { transform: scale(1.4); }
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            max-width: 300px;
+            line-height: 1.7;
+        }
+        .footer-brand .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .footer-brand .social-links a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.3s;
+            background: var(--bg-card);
+        }
+        .footer-brand .social-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-newsletter p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        .footer-newsletter .newsletter-form {
+            display: flex;
+            gap: 8px;
+        }
+        .footer-newsletter .newsletter-form input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--border);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .footer-newsletter .newsletter-form input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+        }
+        .footer-newsletter .newsletter-form button {
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            border: none;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-body);
+            white-space: nowrap;
+        }
+        .footer-newsletter .newsletter-form button:hover {
+            background: var(--accent-light);
+            box-shadow: 0 8px 24px var(--accent-glow-strong);
+            transform: scale(1.02);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-bottom p i {
+            color: var(--accent);
+        }
+        .footer-bottom .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-bottom .footer-legal a {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+        .footer-bottom .footer-legal a:hover {
+            color: var(--accent);
         }
 
         /* ============================================================
            WHATSAPP FLOAT
            ============================================================ */
         .whatsapp-float {
-            position: fixed; bottom: 24px; right: 24px; z-index: 999;
-            width: 58px; height: 58px; border-radius: 50%;
-            background: #25D366; color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 8px 40px rgba(37,211,102,0.4);
-            transition: all 0.5s cubic-bezier(0.34,1.56,0.64,1);
-            border: none; cursor: pointer;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: none;
+            cursor: pointer;
         }
         .whatsapp-float:hover {
-            transform: scale(1.15) rotate(8deg);
-            box-shadow: 0 16px 60px rgba(37,211,102,0.6);
+            transform: scale(1.1) rotate(6deg);
+            box-shadow: 0 12px 48px rgba(37, 211, 102, 0.5);
         }
 
         /* ============================================================
            TEAM MODAL
            ============================================================ */
         .team-modal-overlay {
-            position: fixed; inset: 0; z-index: 2000;
-            background: rgba(0,0,0,0.88); backdrop-filter: blur(16px);
-            display: none; align-items: center; justify-content: center;
-            padding: 20px; overflow-y: auto;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto;
         }
-        .team-modal-overlay.active { display: flex; }
+        .team-modal-overlay.active {
+            display: flex;
+        }
         .team-modal-content {
-            position: relative; width: 100%; max-width: 780px;
-            background: var(--glass-bg); backdrop-filter: blur(40px);
-            border-radius: var(--radius); padding: 36px;
-            border: 1px solid var(--glass-border);
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 36px;
+            border: 1px solid var(--border);
             box-shadow: var(--shadow-hover);
-            animation: modalFade 0.5s cubic-bezier(0.34,1.56,0.64,1);
-            max-height: 85vh; overflow-y: auto;
+            animation: modalFade 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 85vh;
+            overflow-y: auto;
         }
         @keyframes modalFade {
-            from { opacity: 0; transform: scale(0.85) translateY(40px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
         .team-modal-close {
-            position: absolute; top: 12px; right: 16px;
-            background: none; border: none; font-size: 2rem;
-            cursor: pointer; color: var(--text-muted);
-            transition: 0.4s;
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: 0.3s;
         }
-        .team-modal-close:hover { color: var(--accent); transform: rotate(90deg) scale(1.1); }
-        [data-theme="dark"] .team-modal-close:hover { color: var(--gold); }
+        .team-modal-close:hover {
+            color: var(--accent);
+            transform: rotate(90deg) scale(1.05);
+        }
         .team-modal-bg {
-            position: absolute; inset: 0;
-            background-size: cover; background-position: center;
-            opacity: 0.06; border-radius: var(--radius);
-            z-index: 0; pointer-events: none;
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            border-radius: var(--radius);
+            z-index: 0;
+            pointer-events: none;
         }
-        .team-modal-body { position: relative; z-index: 1; }
+        .team-modal-body {
+            position: relative;
+            z-index: 1;
+        }
         .team-modal-body .member-detail {
-            display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            align-items: center;
         }
         .team-modal-body .member-detail img {
-            width: 130px; height: 130px; border-radius: 50%;
-            object-fit: cover; border: 4px solid var(--accent);
-            flex-shrink: 0; box-shadow: 0 0 50px var(--gold-glow);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
         }
-        [data-theme="dark"] .team-modal-body .member-detail img { border-color: var(--gold); }
         .team-modal-body .member-info h2 {
-            font-family: var(--font-heading); font-size: 2rem;
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
         }
         .team-modal-body .member-info .role {
-            font-size: 1rem; font-weight: 700; color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent);
         }
-        [data-theme="dark"] .team-modal-body .member-info .role { color: var(--gold); }
         .team-modal-body .member-info .bio {
-            color: var(--text-secondary); margin: 6px 0 12px;
+            color: var(--text-secondary);
+            margin: 6px 0 12px;
         }
         .team-modal-body .suggestions {
-            margin-top: 24px; padding-top: 20px;
-            border-top: 2px solid var(--border);
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
         }
         .team-modal-body .suggestions h4 {
-            font-family: var(--font-heading); margin-bottom: 12px;
+            font-family: var(--font-heading);
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
         .suggestion-grid {
-            display: flex; gap: 12px; flex-wrap: wrap;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .suggestion-card {
-            display: flex; align-items: center; gap: 10px;
-            padding: 8px 14px; border-radius: 10px;
-            border: 1px solid var(--border); cursor: pointer;
-            transition: all 0.4s;
-            background: var(--glass-bg); backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--bg-secondary);
         }
         .suggestion-card:hover {
-            border-color: var(--gold); transform: translateY(-4px);
-            box-shadow: 0 10px 30px var(--gold-glow);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--accent-glow);
         }
         .suggestion-card img {
-            width: 38px; height: 38px; border-radius: 50%; object-fit: cover;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
         }
-        .suggestion-card .s-name { font-weight: 600; font-size: 0.85rem; }
-        .suggestion-card .s-role { font-size: 0.7rem; color: var(--text-muted); }
+        .suggestion-card .s-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .suggestion-card .s-role {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
 
         /* ============================================================
            ADMIN PANEL
            ============================================================ */
         .admin-dashboard {
-            display: none; padding: 100px 0 60px;
+            display: none;
+            padding: 100px 0 60px;
             background: var(--bg-primary);
         }
-        .admin-dashboard.active { display: block; }
+        .admin-dashboard.active {
+            display: block;
+        }
         .admin-stats {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
-            gap: 16px; margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
         }
         .admin-stat-card {
-            background: var(--glass-bg); backdrop-filter: blur(20px);
-            padding: 16px; border-radius: var(--radius);
-            border: 1px solid var(--glass-border); text-align: center;
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+            box-shadow: var(--shadow-3d);
         }
-        .admin-stat-card h3 { font-size: 1.8rem; color: var(--accent); }
-        [data-theme="dark"] .admin-stat-card h3 { color: var(--gold); }
-        .admin-stat-card p { color: var(--text-muted); }
+        .admin-stat-card h3 {
+            font-size: 1.6rem;
+            color: var(--accent);
+            font-family: var(--font-heading);
+        }
+        .admin-stat-card p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
         .admin-table {
-            width: 100%; border-collapse: collapse;
-            background: var(--glass-bg); backdrop-filter: blur(20px);
-            border-radius: var(--radius); overflow: hidden;
-            border: 1px solid var(--glass-border);
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
         }
-        .admin-table th, .admin-table td {
-            padding: 12px 16px; text-align: left;
+        .admin-table th,
+        .admin-table td {
+            padding: 12px 16px;
+            text-align: left;
             border-bottom: 1px solid var(--border);
         }
-        .admin-table th { background: var(--bg-primary); font-weight: 700; }
-        .admin-table tr:hover { background: var(--bg-primary); }
-        .admin-actions button {
-            background: var(--accent); color: #fff;
-            border: none; padding: 4px 12px; border-radius: 6px;
-            cursor: pointer; margin: 0 4px; transition: 0.3s;
+        .admin-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
         }
-        [data-theme="dark"] .admin-actions button { background: var(--gold); color: #0a0a0f; }
-        .admin-actions button:hover { opacity: 0.8; transform: scale(1.05); }
+        .admin-table tr:hover {
+            background: var(--bg-secondary);
+        }
+        .admin-actions button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 4px;
+            transition: 0.3s;
+            font-size: 0.75rem;
+        }
+        .admin-actions button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
         .admin-add-btn {
-            background: var(--accent); color: #fff;
-            border: none; padding: 10px 20px; border-radius: 10px;
-            cursor: pointer; margin: 12px 0; font-weight: 700;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            margin: 12px 4px 12px 0;
+            font-weight: 600;
             transition: 0.3s;
         }
-        [data-theme="dark"] .admin-add-btn { background: var(--gold); color: #0a0a0f; }
-        .admin-add-btn:hover { transform: scale(1.04); }
+        .admin-add-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        /* Admin - Booking management */
+        .admin-booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .admin-booking-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow-3d);
+        }
+        .admin-booking-card h4 {
+            font-family: var(--font-heading);
+            margin-bottom: 12px;
+        }
+        .admin-booking-card .booking-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .admin-booking-card .booking-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+        .admin-booking-card .booking-item:last-child {
+            border-bottom: none;
+        }
+        .admin-booking-card .booking-item .status-badge {
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .status-badge.confirmed {
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+        .status-badge.pending {
+            background: var(--accent-secondary-glow);
+            color: var(--accent-secondary);
+        }
+        .status-badge.cancelled {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
 
         /* ============================================================
            CLIENT PORTAL
            ============================================================ */
         #clientPortal {
-            display: none; padding: 100px 0 60px;
+            display: none;
+            padding: 100px 0 60px;
             background: var(--bg-primary);
         }
 
@@ -1049,122 +1919,300 @@
            LIGHTBOX
            ============================================================ */
         .lightbox {
-            position: fixed; inset: 0; z-index: 5000;
-            background: rgba(0,0,0,0.92); backdrop-filter: blur(20px);
-            display: none; align-items: center; justify-content: center;
+            position: fixed;
+            inset: 0;
+            z-index: 5000;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
             padding: 40px;
         }
-        .lightbox.active { display: flex; }
+        .lightbox.active {
+            display: flex;
+        }
         .lightbox img {
-            max-width: 80%; max-height: 80%; border-radius: var(--radius);
-            box-shadow: 0 40px 120px rgba(0,0,0,0.6);
-            animation: lightboxFade 0.5s cubic-bezier(0.34,1.56,0.64,1);
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: var(--radius);
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5);
+            animation: lightboxFade 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .lightbox .close-lightbox {
-            position: absolute; top: 30px; right: 40px;
-            font-size: 2.5rem; color: #fff; cursor: pointer;
-            transition: 0.3s; background: none; border: none;
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 2.2rem;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            background: none;
+            border: none;
         }
-        .lightbox .close-lightbox:hover { transform: rotate(90deg) scale(1.1); }
+        .lightbox .close-lightbox:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
         @keyframes lightboxFade {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* ============================================================
            RESPONSIVE
            ============================================================ */
         @media (max-width: 992px) {
-            .hero-grid, .about-grid, .contact-grid {
-                grid-template-columns: 1fr; text-align: center;
+            .hero-grid,
+            .about-grid,
+            .contact-grid,
+            .booking-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-            .hero-content p { margin: 0 auto 32px; }
-            .hero-buttons { justify-content: center; }
-            .hero-stats { justify-content: center; }
-            .about-features { justify-items: center; }
-            .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+            .hero-content p {
+                margin: 0 auto 28px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .about-features {
+                justify-items: center;
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .portfolio-item:nth-child(1),
             .portfolio-item:nth-child(4),
             .portfolio-item:nth-child(6) {
-                grid-column: span 1; grid-row: span 1;
+                grid-column: span 1;
+                grid-row: span 1;
             }
-            .hero-visual .ring { display: none; }
-            .testimonial-card { flex: 0 0 100%; }
-            .hero .wow-float { display: none; }
-            .star-rating { font-size: 2rem; }
+            .testimonial-card {
+                flex: 0 0 100%;
+            }
+            .feedback-form {
+                padding: 28px 20px;
+            }
+            .star-rating {
+                font-size: 2rem;
+                gap: 10px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .admin-booking-grid {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed; inset: 0; background: var(--bg-primary);
-                flex-direction: column; justify-content: center;
-                gap: 28px; font-size: 1.1rem;
+                position: fixed;
+                inset: 0;
+                background: var(--bg-primary);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                font-size: 1rem;
                 transform: translateX(100%);
-                transition: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-                z-index: 999; padding: 40px;
+                transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                z-index: 999;
+                padding: 40px;
             }
-            .nav-links.open { transform: translateX(0); }
-            .hamburger { display: flex; z-index: 1001; }
-            .hero { padding: 120px 0 60px; }
-            .hero-stats { gap: 20px; flex-wrap: wrap; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .services-grid { grid-template-columns: 1fr 1fr; }
-            .team-grid { grid-template-columns: 1fr 1fr; }
-            .bts-grid { grid-template-columns: 1fr 1fr; }
-            .about-features { grid-template-columns: 1fr; }
-            .team-modal-content { padding: 24px; margin: 12px; }
-            .team-modal-body .member-detail { flex-direction: column; text-align: center; }
-            .cursor-dot, .cursor-ring { display: none; }
-            .flip-card { height: 220px; }
-            .star-rating { font-size: 1.8rem; gap: 8px; }
+            .nav-links.open {
+                transform: translateX(0);
+            }
+            .nav-dropdown-menu {
+                position: static;
+                background: var(--bg-secondary);
+                border: none;
+                padding: 8px 0 8px 20px;
+                min-width: auto;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .nav-dropdown:hover .nav-dropdown-menu {
+                transform: none;
+            }
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+            .hero {
+                padding: 120px 0 60px;
+            }
+            .hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .bts-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            .team-modal-content {
+                padding: 24px;
+                margin: 12px;
+            }
+            .team-modal-body .member-detail {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cursor-glow {
+                display: none;
+            }
+            .star-rating {
+                font-size: 1.8rem;
+                gap: 8px;
+            }
+            .feedback-form {
+                padding: 20px 16px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-newsletter .newsletter-form {
+                flex-direction: column;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .calendar-grid .day-cell {
+                padding: 6px 0;
+                font-size: 0.75rem;
+            }
+            .booking-form-side {
+                padding: 20px;
+            }
         }
         @media (max-width: 480px) {
-            .services-grid, .team-grid, .bts-grid { grid-template-columns: 1fr; }
-            .hero-buttons .btn { width: 100%; justify-content: center; }
-            .admin-stats { grid-template-columns: 1fr 1fr; }
-            .flip-card { height: 200px; }
-            .star-rating { font-size: 1.5rem; gap: 6px; }
+            .services-grid,
+            .team-grid,
+            .bts-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .admin-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .star-rating {
+                font-size: 1.5rem;
+                gap: 6px;
+            }
+            .calendar-grid .day-cell {
+                padding: 4px 0;
+                font-size: 0.7rem;
+            }
         }
 
         /* ============================================================
-           REVEAL ANIMATIONS
+           SCROLL ANIMATIONS (AOS-style)
            ============================================================ */
         .reveal {
-            opacity: 0; transform: translateY(50px);
-            transition: all 0.9s cubic-bezier(0.25,0.46,0.45,0.94);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .reveal-left {
-            opacity: 0; transform: translateX(-50px);
-            transition: all 0.9s cubic-bezier(0.25,0.46,0.45,0.94);
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
         .reveal-right {
-            opacity: 0; transform: translateX(50px);
-            transition: all 0.9s cubic-bezier(0.25,0.46,0.45,0.94);
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
         .reveal-scale {
-            opacity: 0; transform: scale(0.9);
-            transition: all 1s cubic-bezier(0.34,1.56,0.64,1);
+            opacity: 0;
+            transform: scale(0.94);
+            transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .reveal-scale.visible { opacity: 1; transform: scale(1); }
-
-        .float-anim { animation: floatY 6s ease-in-out infinite; }
-        @keyframes floatY {
-            0%,100% { transform: translateY(0); }
-            50% { transform: translateY(-16px); }
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .stagger>* {
-            opacity: 0; transform: translateY(40px);
-            transition: all 0.7s cubic-bezier(0.34,1.56,0.64,1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .stagger.visible>*:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:0.05s; }
-        .stagger.visible>*:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:0.1s; }
-        .stagger.visible>*:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:0.15s; }
-        .stagger.visible>*:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:0.2s; }
-        .stagger.visible>*:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:0.25s; }
-        .stagger.visible>*:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:0.3s; }
+        .stagger.visible>*:nth-child(1) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.05s;
+        }
+        .stagger.visible>*:nth-child(2) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+        .stagger.visible>*:nth-child(3) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.15s;
+        }
+        .stagger.visible>*:nth-child(4) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        .stagger.visible>*:nth-child(5) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.25s;
+        }
+        .stagger.visible>*:nth-child(6) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -1172,9 +2220,8 @@
     <!-- ===== SCROLL PROGRESS ===== -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- ===== CUSTOM CURSOR ===== -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- ===== GLOW CURSOR ===== -->
+    <div class="cursor-glow" id="cursorGlow"></div>
 
     <!-- ===== CONFETTI CANVAS ===== -->
     <canvas id="confetti-canvas"></canvas>
@@ -1187,11 +2234,17 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Demos</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#bts">BTS</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#write-review">Write Review</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-dropdown">
+                    <a href="#">More <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#bts">BTS</a></li>
+                        <li><a href="#write-review">Write Review</a></li>
+                    </ul>
+                </li>
                 <li><a href="#" id="clientPortalLink">Client</a></li>
             </ul>
             <div class="nav-actions">
@@ -1206,38 +2259,36 @@
         <!-- HERO -->
         <section class="hero" id="hero">
             <div class="container">
-                <div class="hero-3d-container" id="hero3d">
-                    <div class="hero-grid">
-                        <div class="hero-content">
-                            <div class="badge"><i class="fas fa-circle" style="font-size:0.35rem;"></i> Now Booking 2026</div>
-                            <h1>
-                                Visual <span class="highlight">Storytelling</span><br />
-                                <span class="typing-wrapper">
-                                    <span id="typedText"></span>
-                                    <span class="cursor-blink"></span>
-                                </span>
-                            </h1>
-                            <p>Amingos Production – where photography, video, and marketing converge. We craft authentic content that resonates with your audience.</p>
-                            <div class="hero-buttons">
-                                <a href="#portfolio" class="btn btn-gold"><i class="fas fa-play"></i> View Work</a>
-                                <a href="#contact" class="btn btn-outline"><i class="fas fa-pen"></i> Start Project</a>
-                            </div>
-                            <div class="hero-stats">
-                                <div class="stat"><h3 class="counter" data-target="150">0</h3><p>Projects</p></div>
-                                <div class="stat"><h3 class="counter" data-target="4.9">0.0</h3><p>Rating</p></div>
-                                <div class="stat"><h3 class="counter" data-target="12">0</h3><p>Awards</p></div>
-                            </div>
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge"><i class="fas fa-circle" style="font-size:0.35rem;"></i> Now Booking 2026</div>
+                        <h1>
+                            Visual <span class="highlight">Storytelling</span><br />
+                            That Connects
+                        </h1>
+                        <p>Amingos Production – where photography, video, and marketing converge. We craft authentic content that resonates with your audience.</p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn"><i class="fas fa-play"></i> View Work</a>
+                            <a href="#booking" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
-                        <div class="hero-visual">
-                            <div class="ring"></div>
-                            <div class="ring"></div>
-                            <div class="ring"></div>
-                            <div class="camera-frame float-anim"><i class="fas fa-camera-retro"></i></div>
+                        <div class="hero-stats">
+                            <div class="stat"><h3 class="counter" data-target="150">0</h3><p>Projects</p></div>
+                            <div class="stat"><h3 class="counter" data-target="5.0">0.0</h3><p>Client Rating</p></div>
+                            <div class="stat"><h3 class="counter" data-target="12">0</h3><p>Awards</p></div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="video-container" id="heroVideoContainer">
+                            <video autoplay muted loop playsinline>
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                            </video>
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="wow-float">✦ WOW ✦</div>
         </section>
 
         <!-- ABOUT -->
@@ -1255,25 +2306,25 @@
                             <div class="feat"><i class="fas fa-check-circle"></i> Social Media Marketing</div>
                             <div class="feat"><i class="fas fa-check-circle"></i> Performance Marketing</div>
                         </div>
-                        <a href="#contact" class="btn btn-gold" style="margin-top:20px;"><i class="fas fa-arrow-right"></i> Work With Us</a>
+                        <a href="#contact" class="btn" style="margin-top:20px;"><i class="fas fa-arrow-right"></i> Work With Us</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES - FLIP CARDS -->
+        <!-- SERVICES -->
         <section id="services" style="background:var(--bg-secondary);">
             <div class="container">
                 <div style="text-align:center; margin-bottom:12px;">
                     <span class="section-label" style="margin:0 auto;">What We Do</span>
                     <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">Hover or tap to flip and discover more.</p>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">From concept to conversion – we deliver.</p>
                 </div>
                 <div class="services-grid stagger" id="servicesContainer"></div>
             </div>
         </section>
 
-        <!-- PORTFOLIO - MASONRY -->
+        <!-- PORTFOLIO -->
         <section id="portfolio">
             <div class="container">
                 <div style="text-align:center; margin-bottom:12px;">
@@ -1309,7 +2360,7 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS - CAROUSEL -->
+        <!-- TESTIMONIALS -->
         <section id="testimonials" style="background:var(--bg-secondary);">
             <div class="container">
                 <div style="text-align:center; margin-bottom:12px;">
@@ -1327,7 +2378,7 @@
             </div>
         </section>
 
-        <!-- ===== FEEDBACK SECTION (with extra animations) ===== -->
+        <!-- FEEDBACK -->
         <section id="write-review" style="background:var(--bg-primary);">
             <div class="container">
                 <div style="text-align:center; margin-bottom:12px;">
@@ -1335,7 +2386,7 @@
                     <h2 class="section-title">Share Your <span class="highlight">Experience</span></h2>
                     <p class="section-sub" style="margin-left:auto; margin-right:auto;">Your feedback helps us grow and serve you better.</p>
                 </div>
-                <div class="feedback-form glass-card" style="max-width:700px; margin:0 auto; padding:40px;">
+                <div class="feedback-form" id="feedbackForm">
                     <div class="star-rating" id="starRating">
                         <i class="fas fa-star" data-value="1"></i>
                         <i class="fas fa-star" data-value="2"></i>
@@ -1343,14 +2394,93 @@
                         <i class="fas fa-star" data-value="4"></i>
                         <i class="fas fa-star" data-value="5"></i>
                     </div>
-                    <div style="margin-top:20px;">
-                        <input type="text" id="reviewerName" placeholder="Your Name" style="margin-bottom:16px;" />
-                        <textarea id="reviewerFeedback" placeholder="Write your feedback..." style="margin-bottom:16px;"></textarea>
-                        <button class="btn btn-gold" id="submitFeedback" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Submit Feedback</button>
+                    <div class="star-rating-label" id="starLabel">Tap a star to rate</div>
+                    <div style="margin-top:16px;">
+                        <input type="text" id="reviewerName" placeholder="Your Name" style="margin-bottom:14px;" />
+                        <textarea id="reviewerFeedback" placeholder="Write your feedback..." style="margin-bottom:14px;"></textarea>
+                        <button class="btn" id="submitFeedback" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Submit Feedback</button>
                     </div>
                     <div class="feedback-success" id="feedbackSuccess">
                         <i class="fas fa-star"></i><br />
                         Thank you for your feedback! ✨
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+           APPOINTMENT BOOKING SECTION (NEW)
+           ============================================================ -->
+        <section id="booking" style="background:var(--bg-secondary);">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:12px;">
+                    <span class="section-label" style="margin:0 auto;">Book Appointment</span>
+                    <h2 class="section-title">Schedule a <span class="highlight">Consultation</span></h2>
+                    <p class="section-sub" style="margin-left:auto; margin-right:auto;">Choose a date and time that works for you. We'll confirm your booking shortly.</p>
+                </div>
+                <div class="booking-grid">
+                    <!-- Calendar -->
+                    <div class="calendar-container reveal-left">
+                        <div class="calendar-header">
+                            <button class="calendar-nav" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                            <h3 id="calendarMonthYear">January 2026</h3>
+                            <button class="calendar-nav" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid"></div>
+                        <div class="time-slots" id="timeSlotsContainer">
+                            <h4>Select a time slot</h4>
+                            <div class="time-slots-grid" id="timeSlotsGrid">
+                                <span class="time-slot disabled">Select a date first</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Form -->
+                    <div class="booking-form-side reveal-right" id="bookingFormSide">
+                        <div id="bookingFormContent">
+                            <h3>Book your appointment</h3>
+                            <p>Fill in your details and we'll confirm your slot.</p>
+                            <div class="form-group">
+                                <label>Selected Date</label>
+                                <input type="text" id="selectedDateDisplay" placeholder="Select a date from calendar" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label>Selected Time</label>
+                                <input type="text" id="selectedTimeDisplay" placeholder="Select a time slot" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label>Your Name *</label>
+                                <input type="text" id="bookingName" placeholder="Enter your full name" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="bookingEmail" placeholder="Enter your email" />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="bookingPhone" placeholder="Enter your phone number" />
+                            </div>
+                            <div class="form-group">
+                                <label>Service Type</label>
+                                <select id="bookingService">
+                                    <option value="Wedding Photography">Wedding Photography</option>
+                                    <option value="Cinematic Reel">Cinematic Reel</option>
+                                    <option value="Brand Campaign">Brand Campaign</option>
+                                    <option value="Event Coverage">Event Coverage</option>
+                                    <option value="Content Creation">Content Creation</option>
+                                    <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="Performance Marketing">Performance Marketing</option>
+                                    <option value="Consultation Call">Consultation Call</option>
+                                </select>
+                            </div>
+                            <button class="btn" id="bookAppointmentBtn" style="width:100%; justify-content:center;"><i class="fas fa-check-circle"></i> Confirm Booking</button>
+                        </div>
+                        <div class="booking-confirmation" id="bookingConfirmation">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Booking Confirmed!</h3>
+                            <p>We've received your appointment request. We'll send a confirmation to your email shortly.</p>
+                            <button class="btn btn-outline" style="margin-top:16px;" onclick="resetBooking()">Book Another</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1366,7 +2496,7 @@
                 </div>
                 <div class="contact-grid">
                     <div class="contact-info reveal-left">
-                        <h3>Bring your vision to life.</h3>
+                        <h3 style="font-family:var(--font-heading);">Bring your vision to life.</h3>
                         <p style="color:var(--text-secondary);">Whether it's a wedding, a brand campaign, or a marketing strategy – we're here to make it extraordinary.</p>
                         <div class="detail"><i class="fas fa-map-marker-alt"></i><div><strong>Ambikapur</strong><br /><span style="color:var(--text-muted);">Chhattisgarh, India</span></div></div>
                         <div class="detail"><i class="fas fa-phone-alt"></i><div><strong>+91 98765 43210</strong><br /><span style="color:var(--text-muted);">Mon–Sat, 9AM – 8PM</span></div></div>
@@ -1377,7 +2507,7 @@
                         <input type="email" placeholder="Email Address" required />
                         <input type="text" placeholder="Subject" />
                         <textarea placeholder="Tell us about your project…" required></textarea>
-                        <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
                     </form>
                 </div>
                 <div class="map-container reveal-scale">
@@ -1406,8 +2536,31 @@
                 <button class="admin-add-btn" data-section="team">+ Add Team</button>
                 <button class="admin-add-btn" data-section="services">+ Add Service</button>
                 <button class="admin-add-btn" data-section="project">+ Add Project</button>
+                <button class="admin-add-btn" id="adminAddBooking">+ Add Booking (Admin)</button>
             </div>
-            <div id="adminContent"></div>
+            <!-- Booking Management -->
+            <div class="admin-booking-grid">
+                <div class="admin-booking-card">
+                    <h4>📋 All Bookings</h4>
+                    <div class="booking-list" id="adminBookingList"></div>
+                </div>
+                <div class="admin-booking-card">
+                    <h4>📅 Manage Availability</h4>
+                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Toggle dates as booked/unavailable. Clients won't be able to book these dates.</p>
+                    <div style="margin-bottom:12px;">
+                        <label style="font-size:0.8rem; font-weight:600;">Add booked date:</label>
+                        <div style="display:flex; gap:8px; margin-top:4px;">
+                            <input type="date" id="adminBookedDate" style="padding:8px 12px; border-radius:var(--radius-sm); border:2px solid var(--border); background:var(--bg-secondary); color:var(--text-primary); font-family:var(--font-body); flex:1;" />
+                            <button class="btn" id="adminAddBookedDate" style="padding:8px 16px; font-size:0.8rem;">Add</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:600;">Booked dates:</label>
+                        <div id="adminBookedDatesList" style="display:flex; flex-wrap:wrap; gap:6px; margin-top:6px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="adminContent" style="margin-top:30px;"></div>
         </div>
     </div>
 
@@ -1448,26 +2601,24 @@
                 { id: 4, icon: 'fa-chart-line', title: 'Performance Marketing', desc: 'Data‑driven ads, analytics, and optimisation for measurable results.' }
             ],
             portfolio: [
-                { id: 1, title: 'Sunita Saree House', desc: 'Brand Campaign', type: 'image', url: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800&h=600&fit=crop' },
-                { id: 2, title: 'Dream Wedding', desc: 'Cinematic Reel', type: 'video', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
-                { id: 3, title: 'Product Story', desc: 'Content Series', type: 'image', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop' },
-                { id: 4, title: 'Pre‑Wedding Shoot', desc: 'Couple\'s Journey', type: 'image', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
-                { id: 5, title: 'Fashion Reel', desc: 'Sunita Saree House', type: 'video', url: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=600&fit=crop' },
-                { id: 6, title: 'Event Coverage', desc: 'Corporate Gala', type: 'image', url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop' }
+                { id: 1, title: 'Sunita Saree House', desc: 'Brand Campaign', url: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800&h=600&fit=crop' },
+                { id: 2, title: 'Dream Wedding', desc: 'Cinematic Reel', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
+                { id: 3, title: 'Product Story', desc: 'Content Series', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop' },
+                { id: 4, title: 'Pre‑Wedding Shoot', desc: 'Couple\'s Journey', url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
+                { id: 5, title: 'Fashion Reel', desc: 'Sunita Saree House', url: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=600&fit=crop' },
+                { id: 6, title: 'Event Coverage', desc: 'Corporate Gala', url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop' }
             ],
             team: [
-                { id: 1, name: 'Amingo Singh', role: 'Founder & Lead Photographer', bio: '10+ years of capturing stories. Visionary and storyteller.', avatar: 'https://ui-avatars.com/api/?name=Amingo+Singh&background=b8860b&color=fff&size=140' },
-                { id: 2, name: 'Priya Sharma', role: 'Cinematographer & Editor', bio: 'Crafts cinematic reels with a keen eye for detail.', avatar: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=b8860b&color=fff&size=140' },
-                { id: 3, name: 'Rahul Verma', role: 'Lighting & Production', bio: 'Ensures every shot is perfectly lit and cinematic.', avatar: 'https://ui-avatars.com/api/?name=Rahul+Verma&background=b8860b&color=fff&size=140' },
-                { id: 4, name: 'Anjali Gupta', role: 'Creative Director', bio: 'Brings concepts to life with innovative storytelling.', avatar: 'https://ui-avatars.com/api/?name=Anjali+Gupta&background=b8860b&color=fff&size=140' }
+                { id: 1, name: 'Amingo Singh', role: 'Founder & Lead Photographer', bio: '10+ years of capturing stories. Visionary and storyteller.', avatar: 'https://ui-avatars.com/api/?name=Amingo+Singh&background=00E5FF&color=0B0D15&size=140' },
+                { id: 2, name: 'Priya Sharma', role: 'Cinematographer & Editor', bio: 'Crafts cinematic reels with a keen eye for detail.', avatar: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=00E5FF&color=0B0D15&size=140' },
+                { id: 3, name: 'Rahul Verma', role: 'Lighting & Production', bio: 'Ensures every shot is perfectly lit and cinematic.', avatar: 'https://ui-avatars.com/api/?name=Rahul+Verma&background=00E5FF&color=0B0D15&size=140' },
+                { id: 4, name: 'Anjali Gupta', role: 'Creative Director', bio: 'Brings concepts to life with innovative storytelling.', avatar: 'https://ui-avatars.com/api/?name=Anjali+Gupta&background=00E5FF&color=0B0D15&size=140' }
             ],
             bts: [
-                { id: 1, icon: 'fa-camera', label: 'On‑location shoot' },
-                { id: 2, icon: 'fa-sliders-h', label: 'Color grading' },
-                { id: 3, icon: 'fa-cut', label: 'Editing suite' },
-                { id: 4, icon: 'fa-lightbulb', label: 'Lighting setup' },
-                { id: 5, icon: 'fa-music', label: 'Sound design' },
-                { id: 6, icon: 'fa-laugh', label: 'Fun on set' }
+                { id: 1, icon: 'fa-lightbulb', label: 'Ideation', desc: 'Brainstorming creative concepts' },
+                { id: 2, icon: 'fa-camera', label: 'Shoot', desc: 'On-location production' },
+                { id: 3, icon: 'fa-sliders-h', label: 'Editing', desc: 'Color grading & post-production' },
+                { id: 4, icon: 'fa-check-circle', label: 'Delivery', desc: 'Final polish & client handoff' }
             ],
             testimonials: [
                 { id: 1, client: 'Riya & Mohit', title: 'Wedding Clients', text: 'Amingos Production made our wedding feel like a movie. The attention to detail and the emotions captured — simply outstanding.', rating: 5 },
@@ -1476,11 +2627,13 @@
             ],
             projects: [
                 { id: 1, clientName: 'Riya & Mohit', type: 'Wedding', status: 'Completed', date: '2026-01-15', deliverables: 'Gallery Link', feedback: '' },
-                { id: 2, clientName: 'Sunita Saree House', type: 'Brand Campaign', status: 'In Progress', date: '2026-02-01', deliverables: 'Reel Draft', feedback: '' },
+                { id: 2, clientName: 'Sunita Saree House', type: 'Brand Campaign', status: 'In Progress', date: '2026-02-01', deliverables: 'Reel Draft', feedback: '' }
             ],
             bookings: [
-                { date: '2026-03-10', client: 'Test Client' }
+                { id: 1, date: '2026-03-15', time: '10:00 AM', clientName: 'Test Client', email: 'test@email.com', phone: '9876543210', service: 'Consultation Call', status: 'confirmed' },
+                { id: 2, date: '2026-03-18', time: '2:30 PM', clientName: 'Demo Client', email: 'demo@email.com', phone: '9876543211', service: 'Wedding Photography', status: 'pending' }
             ],
+            bookedDates: ['2026-03-20', '2026-03-22', '2026-03-25'],
             feedbacks: [
                 { projectId: 1, rating: 5, comment: 'Amazing work!', client: 'Riya & Mohit' }
             ]
@@ -1506,17 +2659,10 @@
             const data = loadData();
             const container = document.getElementById('servicesContainer');
             container.innerHTML = data.services.map(s => `
-                <div class="flip-card reveal-scale" style="transition-delay:0.05s;">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="icon"><i class="fas ${s.icon}"></i></div>
-                            <h3>${s.title}</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="icon-back"><i class="fas ${s.icon}"></i></div>
-                            <p>${s.desc}</p>
-                        </div>
-                    </div>
+                <div class="service-card reveal-scale" style="transition-delay:0.05s;">
+                    <div class="icon"><i class="fas ${s.icon}"></i></div>
+                    <h3>${s.title}</h3>
+                    <p>${s.desc}</p>
                 </div>
             `).join('');
             observeReveals();
@@ -1528,7 +2674,6 @@
             container.innerHTML = data.portfolio.map(p => `
                 <div class="portfolio-item reveal-scale" style="transition-delay:0.05s;" onclick="openLightbox('${p.url}', '${p.title}')">
                     <img src="${p.url}" alt="${p.title}" />
-                    ${p.type === 'video' ? `<div class="play-badge"><i class="fas fa-play-circle"></i></div>` : ''}
                     <div class="overlay">
                         <h4>${p.title}</h4>
                         <p>${p.desc}</p>
@@ -1542,7 +2687,7 @@
             const data = loadData();
             const container = document.getElementById('teamContainer');
             container.innerHTML = data.team.map(m => `
-                <div class="team-card glass-card reveal-scale" style="transition-delay:0.05s;" onclick="openTeamProfile(${m.id})">
+                <div class="team-card reveal-scale" style="transition-delay:0.05s;" onclick="openTeamProfile(${m.id})">
                     <div class="avatar"><img src="${m.avatar}" alt="${m.name}" /></div>
                     <h4>${m.name}</h4>
                     <p class="role">${m.role}</p>
@@ -1556,9 +2701,11 @@
             const data = loadData();
             const container = document.getElementById('btsContainer');
             container.innerHTML = data.bts.map(b => `
-                <div class="bts-item glass-card reveal-scale" style="transition-delay:0.05s;">
+                <div class="bts-item reveal-scale" style="transition-delay:0.05s;">
+                    <span class="step-number">${b.id}</span>
                     <i class="fas ${b.icon}"></i>
-                    <div class="bts-label"><i class="fas ${b.icon}" style="margin-right:8px;"></i> ${b.label}</div>
+                    <h4>${b.label}</h4>
+                    <p>${b.desc}</p>
                 </div>
             `).join('');
             observeReveals();
@@ -1595,6 +2742,9 @@
             renderTestimonials();
             updateStats();
             runCounters();
+            renderCalendar();
+            renderAdminBookings();
+            renderAdminBookedDates();
         }
 
         // ============================================================
@@ -1612,9 +2762,13 @@
                         current = target;
                         clearInterval(interval);
                     }
-                    counter.textContent = isFloat ? current.toFixed(1) : Math.floor(current);
-                    if (counter.dataset.target === '4.9' && current >= 4.9) {
-                        counter.textContent = '4.9★';
+                    if (isFloat) {
+                        counter.textContent = current.toFixed(1);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                    if (counter.dataset.target === '5.0' && current >= 5.0) {
+                        counter.textContent = '5.0★';
                     }
                 }, 30);
             });
@@ -1625,7 +2779,7 @@
             const counters = document.querySelectorAll('.counter');
             if (counters.length >= 3) {
                 counters[0].dataset.target = data.projects.length + 150;
-                counters[1].dataset.target = data.feedbacks.length > 0 ? (data.feedbacks.reduce((a, f) => a + f.rating, 0) / data.feedbacks.length) : 4.9;
+                counters[1].dataset.target = 5.0;
                 counters[2].dataset.target = data.portfolio.length + 6;
             }
         }
@@ -1683,11 +2837,19 @@
         });
 
         // ============================================================
-        //  FEEDBACK WITH CONFETTI & EXTRA ANIMATIONS
+        //  FEEDBACK — Dynamic Stars + Confetti
         // ============================================================
-        // Star rating
         const stars = document.querySelectorAll('#starRating i');
         let selectedRating = 0;
+        const starLabels = {
+            0: 'Tap a star to rate',
+            1: '😕 Needs Improvement',
+            2: '🙂 Fair',
+            3: '😊 Good',
+            4: '🌟 Great!',
+            5: '⭐ Excellent! Loved it!'
+        };
+        const starLabelEl = document.getElementById('starLabel');
 
         stars.forEach(star => {
             star.addEventListener('click', function() {
@@ -1699,29 +2861,34 @@
                         s.classList.remove('active');
                     }
                 });
+                starLabelEl.textContent = starLabels[selectedRating] || starLabels[0];
+                starLabelEl.style.transform = 'scale(1.05)';
+                setTimeout(() => { starLabelEl.style.transform = 'scale(1)'; }, 200);
             });
             star.addEventListener('mouseenter', function() {
                 const val = parseInt(this.dataset.value);
                 stars.forEach(s => {
                     if (parseInt(s.dataset.value) <= val) {
-                        s.style.color = 'var(--gold)';
+                        s.style.color = 'var(--accent)';
                     } else {
                         s.style.color = 'var(--text-muted)';
                     }
                 });
+                starLabelEl.textContent = starLabels[val] || starLabels[0];
             });
             star.addEventListener('mouseleave', function() {
                 stars.forEach(s => {
                     if (s.classList.contains('active')) {
-                        s.style.color = 'var(--gold)';
+                        s.style.color = 'var(--accent)';
                     } else {
                         s.style.color = 'var(--text-muted)';
                     }
                 });
+                starLabelEl.textContent = starLabels[selectedRating] || starLabels[0];
             });
         });
 
-        // Confetti (canvas)
+        // Confetti
         const canvas = document.getElementById('confetti-canvas');
         const ctx = canvas.getContext('2d');
         let confettiPieces = [];
@@ -1738,8 +2905,8 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height - canvas.height;
-                this.w = Math.random() * 10 + 5;
-                this.h = Math.random() * 6 + 3;
+                this.w = Math.random() * 8 + 4;
+                this.h = Math.random() * 5 + 2;
                 this.color = `hsl(${Math.random() * 360}, 80%, 60%)`;
                 this.rotation = 0;
                 this.speed = Math.random() * 3 + 2;
@@ -1760,7 +2927,7 @@
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.rotation);
                 ctx.fillStyle = this.color;
-                ctx.fillRect(-this.w/2, -this.h/2, this.w, this.h);
+                ctx.fillRect(-this.w / 2, -this.h / 2, this.w, this.h);
                 ctx.restore();
             }
         }
@@ -1768,7 +2935,7 @@
         function startConfetti() {
             confettiActive = true;
             confettiPieces = [];
-            for (let i = 0; i < 150; i++) {
+            for (let i = 0; i < 120; i++) {
                 confettiPieces.push(new ConfettiPiece());
             }
             animateConfetti();
@@ -1777,10 +2944,8 @@
         function animateConfetti() {
             if (!confettiActive) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            confettiPieces.forEach(p => {
-                p.update();
-                p.draw();
-            });
+            confettiPieces.forEach(p => { p.update();
+                p.draw(); });
             requestAnimationFrame(animateConfetti);
         }
 
@@ -1789,7 +2954,6 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
 
-        // Submit feedback
         document.getElementById('submitFeedback').addEventListener('click', function() {
             const name = document.getElementById('reviewerName').value.trim();
             const feedback = document.getElementById('reviewerFeedback').value.trim();
@@ -1798,38 +2962,364 @@
                 return;
             }
             const data = loadData();
-            const newTestimonial = {
+            data.testimonials.push({
                 id: Date.now(),
                 client: name,
                 title: 'Client Review',
                 text: feedback,
                 rating: selectedRating
-            };
-            data.testimonials.push(newTestimonial);
+            });
             saveData(data);
-
-            // Re-render carousel
             renderTestimonials();
 
-            // Show success with animations
             const success = document.getElementById('feedbackSuccess');
             success.classList.add('show');
             document.getElementById('reviewerName').value = '';
             document.getElementById('reviewerFeedback').value = '';
             stars.forEach(s => s.classList.remove('active'));
             selectedRating = 0;
+            starLabelEl.textContent = starLabels[0];
 
-            // Confetti!
             startConfetti();
             setTimeout(stopConfetti, 4000);
-
-            setTimeout(() => {
-                success.classList.remove('show');
-            }, 5000);
+            setTimeout(() => { success.classList.remove('show'); }, 5000);
         });
 
         // ============================================================
-        //  ADMIN
+        //  CALENDAR & BOOKING SYSTEM (NEW)
+        // ============================================================
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        let selectedDate = null;
+        let selectedTime = null;
+        const timeSlots = [
+            '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM',
+            '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM',
+            '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM',
+            '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM',
+            '5:00 PM', '5:30 PM', '6:00 PM'
+        ];
+
+        function renderCalendar() {
+            const data = loadData();
+            const grid = document.getElementById('calendarGrid');
+            const monthYear = document.getElementById('calendarMonthYear');
+
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
+            ];
+            monthYear.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const today = new Date();
+
+            let html = '';
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            dayNames.forEach(d => {
+                html += `<div class="day-name">${d}</div>`;
+            });
+
+            // Empty cells before first day
+            for (let i = 0; i < firstDay; i++) {
+                html += `<div class="day-cell empty"></div>`;
+            }
+
+            // Days
+            const bookedDates = data.bookedDates || [];
+            const todayStr = today.toISOString().split('T')[0];
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                const isBooked = bookedDates.includes(dateStr);
+                const isToday = dateStr === todayStr;
+                const isPast = dateStr < todayStr;
+                const isSelected = selectedDate === dateStr;
+
+                let classes = 'day-cell';
+                if (isBooked || isPast) classes += ' booked';
+                if (isToday) classes += ' today';
+                if (isSelected) classes += ' selected';
+
+                html += `<div class="${classes}" data-date="${dateStr}" onclick="selectDate('${dateStr}')">${d}</div>`;
+            }
+
+            grid.innerHTML = html;
+
+            // If a date is selected, show time slots
+            if (selectedDate) {
+                renderTimeSlots(selectedDate);
+            } else {
+                document.getElementById('timeSlotsGrid').innerHTML =
+                    `<span class="time-slot disabled">Select a date first</span>`;
+            }
+        }
+
+        function selectDate(dateStr) {
+            const data = loadData();
+            const bookedDates = data.bookedDates || [];
+            const today = new Date().toISOString().split('T')[0];
+
+            if (bookedDates.includes(dateStr) || dateStr < today) {
+                // If booked or past, just show it as selected but disabled
+                selectedDate = dateStr;
+                renderCalendar();
+                document.getElementById('timeSlotsGrid').innerHTML =
+                    `<span class="time-slot disabled">This date is not available</span>`;
+                document.getElementById('selectedDateDisplay').value = dateStr;
+                document.getElementById('selectedTimeDisplay').value = '';
+                selectedTime = null;
+                return;
+            }
+
+            selectedDate = dateStr;
+            selectedTime = null;
+            renderCalendar();
+            renderTimeSlots(dateStr);
+            document.getElementById('selectedDateDisplay').value = dateStr;
+            document.getElementById('selectedTimeDisplay').value = '';
+        }
+
+        function renderTimeSlots(dateStr) {
+            const data = loadData();
+            const grid = document.getElementById('timeSlotsGrid');
+
+            // Get booked times for this date from bookings
+            const dateBookings = data.bookings.filter(b => b.date === dateStr);
+            const bookedTimes = dateBookings.map(b => b.time);
+
+            let html = '';
+            timeSlots.forEach(time => {
+                const isBooked = bookedTimes.includes(time);
+                const isSelected = selectedTime === time;
+                let classes = 'time-slot';
+                if (isBooked) classes += ' booked-slot';
+                if (isSelected) classes += ' selected-slot';
+                html += `<div class="${classes}" onclick="${isBooked ? '' : `selectTime('${time}')`}">${time}</div>`;
+            });
+
+            grid.innerHTML = html || `<span class="time-slot disabled">No slots available</span>`;
+        }
+
+        function selectTime(time) {
+            selectedTime = time;
+            document.getElementById('selectedTimeDisplay').value = time;
+            renderTimeSlots(selectedDate);
+        }
+
+        // Month navigation
+        document.getElementById('prevMonth').addEventListener('click', function() {
+            currentMonth--;
+            if (currentMonth < 0) { currentMonth = 11;
+                currentYear--; }
+            selectedDate = null;
+            selectedTime = null;
+            document.getElementById('selectedDateDisplay').value = '';
+            document.getElementById('selectedTimeDisplay').value = '';
+            renderCalendar();
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', function() {
+            currentMonth++;
+            if (currentMonth > 11) { currentMonth = 0;
+                currentYear++; }
+            selectedDate = null;
+            selectedTime = null;
+            document.getElementById('selectedDateDisplay').value = '';
+            document.getElementById('selectedTimeDisplay').value = '';
+            renderCalendar();
+        });
+
+        // Book appointment
+        document.getElementById('bookAppointmentBtn').addEventListener('click', function() {
+            const name = document.getElementById('bookingName').value.trim();
+            const email = document.getElementById('bookingEmail').value.trim();
+            const phone = document.getElementById('bookingPhone').value.trim();
+            const service = document.getElementById('bookingService').value;
+
+            if (!selectedDate || !selectedTime) {
+                alert('Please select a date and time slot.');
+                return;
+            }
+            if (!name || !email) {
+                alert('Please enter your name and email.');
+                return;
+            }
+
+            const data = loadData();
+
+            // Check if slot is still available
+            const existing = data.bookings.filter(b => b.date === selectedDate && b.time === selectedTime);
+            if (existing.length > 0) {
+                alert('This slot has just been booked. Please select another time.');
+                renderTimeSlots(selectedDate);
+                return;
+            }
+
+            // Create booking
+            const newBooking = {
+                id: Date.now(),
+                date: selectedDate,
+                time: selectedTime,
+                clientName: name,
+                email: email,
+                phone: phone || 'Not provided',
+                service: service,
+                status: 'pending',
+                createdAt: new Date().toISOString()
+            };
+
+            data.bookings.push(newBooking);
+            saveData(data);
+
+            // Show confirmation
+            document.getElementById('bookingFormContent').style.display = 'none';
+            document.getElementById('bookingConfirmation').classList.add('show');
+
+            // Reset form state
+            document.getElementById('bookingName').value = '';
+            document.getElementById('bookingEmail').value = '';
+            document.getElementById('bookingPhone').value = '';
+
+            // Re-render calendar and admin
+            renderCalendar();
+            renderAdminBookings();
+
+            // Trigger confetti celebration
+            startConfetti();
+            setTimeout(stopConfetti, 3000);
+        });
+
+        function resetBooking() {
+            document.getElementById('bookingFormContent').style.display = 'block';
+            document.getElementById('bookingConfirmation').classList.remove('show');
+            selectedDate = null;
+            selectedTime = null;
+            document.getElementById('selectedDateDisplay').value = '';
+            document.getElementById('selectedTimeDisplay').value = '';
+            renderCalendar();
+        }
+
+        // ============================================================
+        //  ADMIN — Booking Management
+        // ============================================================
+        function renderAdminBookings() {
+            const data = loadData();
+            const container = document.getElementById('adminBookingList');
+
+            if (data.bookings.length === 0) {
+                container.innerHTML = '<p style="color:var(--text-muted); font-size:0.85rem;">No bookings yet.</p>';
+                return;
+            }
+
+            // Sort by date (newest first)
+            const sorted = [...data.bookings].sort((a, b) => b.id - a.id);
+
+            container.innerHTML = sorted.map(b => `
+                <div class="booking-item">
+                    <div>
+                        <strong>${b.clientName}</strong><br />
+                        <span style="font-size:0.75rem; color:var(--text-muted);">${b.date} at ${b.time}</span><br />
+                        <span style="font-size:0.75rem; color:var(--text-muted);">${b.service}</span>
+                    </div>
+                    <div style="text-align:right;">
+                        <span class="status-badge ${b.status}">${b.status}</span><br />
+                        <button class="btn" style="padding:2px 10px; font-size:0.7rem; margin-top:4px;" onclick="updateBookingStatus(${b.id}, 'confirmed')">Confirm</button>
+                        <button class="btn" style="padding:2px 10px; font-size:0.7rem; margin-top:4px; background:#ef4444;" onclick="updateBookingStatus(${b.id}, 'cancelled')">Cancel</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateBookingStatus(id, status) {
+            const data = loadData();
+            const booking = data.bookings.find(b => b.id === id);
+            if (booking) {
+                booking.status = status;
+                saveData(data);
+                renderAdminBookings();
+                renderAdminBookedDates(); // refresh booked dates
+                renderCalendar();
+            }
+        }
+
+        function renderAdminBookedDates() {
+            const data = loadData();
+            const container = document.getElementById('adminBookedDatesList');
+            const bookedDates = data.bookedDates || [];
+
+            if (bookedDates.length === 0) {
+                container.innerHTML = '<span style="font-size:0.8rem; color:var(--text-muted);">No dates marked as booked.</span>';
+                return;
+            }
+
+            container.innerHTML = bookedDates.map(date => `
+                <span style="display:inline-flex; align-items:center; gap:6px; background:var(--bg-card); padding:4px 12px; border-radius:50px; border:1px solid var(--border); font-size:0.75rem;">
+                    ${date}
+                    <button onclick="removeBookedDate('${date}')" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:0.7rem;">✕</button>
+                </span>
+            `).join('');
+        }
+
+        document.getElementById('adminAddBookedDate').addEventListener('click', function() {
+            const input = document.getElementById('adminBookedDate');
+            const date = input.value;
+            if (!date) {
+                alert('Please select a date.');
+                return;
+            }
+            const data = loadData();
+            if (!data.bookedDates) data.bookedDates = [];
+            if (!data.bookedDates.includes(date)) {
+                data.bookedDates.push(date);
+                saveData(data);
+                renderAdminBookedDates();
+                renderCalendar();
+                input.value = '';
+            } else {
+                alert('This date is already in the list.');
+            }
+        });
+
+        function removeBookedDate(date) {
+            const data = loadData();
+            data.bookedDates = data.bookedDates.filter(d => d !== date);
+            saveData(data);
+            renderAdminBookedDates();
+            renderCalendar();
+        }
+
+        // Admin add booking button
+        document.getElementById('adminAddBooking').addEventListener('click', function() {
+            const date = prompt('Enter date (YYYY-MM-DD):');
+            if (!date) return;
+            const time = prompt('Enter time (e.g., 10:00 AM):');
+            if (!time) return;
+            const clientName = prompt('Client name:') || 'Admin Booking';
+            const email = prompt('Client email:') || 'admin@booking.com';
+            const service = prompt('Service type:') || 'Consultation Call';
+
+            const data = loadData();
+            data.bookings.push({
+                id: Date.now(),
+                date: date,
+                time: time,
+                clientName: clientName,
+                email: email,
+                phone: 'Admin added',
+                service: service,
+                status: 'confirmed',
+                createdAt: new Date().toISOString()
+            });
+            saveData(data);
+            renderAdminBookings();
+            renderAdminBookedDates();
+            renderCalendar();
+            alert('Booking added successfully!');
+        });
+
+        // ============================================================
+        //  ADMIN — Main
         // ============================================================
         function renderAdmin() {
             const data = loadData();
@@ -1838,13 +3328,14 @@
                 <div class="admin-stat-card"><h3>${data.team.length}</h3><p>Team</p></div>
                 <div class="admin-stat-card"><h3>${data.portfolio.length}</h3><p>Portfolio</p></div>
                 <div class="admin-stat-card"><h3>${data.testimonials.length}</h3><p>Testimonials</p></div>
+                <div class="admin-stat-card"><h3>${data.bookings.length}</h3><p>Bookings</p></div>
             `;
             document.getElementById('adminStats').innerHTML = statsHtml;
 
             let content = `
                 <h3 style="margin:16px 0 8px;">Portfolio</h3>
-                <table class="admin-table"><thead><tr><th>Title</th><th>Type</th><th>Actions</th></tr></thead><tbody>
-                ${data.portfolio.map(p => `<tr><td>${p.title}</td><td>${p.type}</td><td class="admin-actions"><button onclick="editItem('portfolio',${p.id})">Edit</button><button onclick="deleteItem('portfolio',${p.id})">Delete</button></td></tr>`).join('')}
+                <table class="admin-table"><thead><tr><th>Title</th><th>Actions</th></tr></thead><tbody>
+                ${data.portfolio.map(p => `<tr><td>${p.title}</td><td class="admin-actions"><button onclick="editItem('portfolio',${p.id})">Edit</button><button onclick="deleteItem('portfolio',${p.id})">Delete</button></td></tr>`).join('')}
                 </tbody></table>
                 <h3 style="margin:16px 0 8px;">Team</h3>
                 <table class="admin-table"><thead><tr><th>Name</th><th>Role</th><th>Actions</th></tr></thead><tbody>
@@ -1863,7 +3354,7 @@
         }
 
         function deleteItem(section, id) {
-            if (!confirm(`Delete this ${section.slice(0,-1)}?`)) return;
+            if (!confirm(`Delete this ${section.slice(0, -1)}?`)) return;
             const data = loadData();
             data[section] = data[section].filter(item => item.id !== id);
             saveData(data);
@@ -1905,19 +3396,20 @@
 
         document.querySelectorAll('.admin-add-btn').forEach(btn => {
             btn.addEventListener('click', function() {
+                if (this.id === 'adminAddBooking') return; // handled separately
                 const section = this.dataset.section;
                 const data = loadData();
                 let newItem = { id: Date.now() };
                 if (section === 'portfolio') {
                     newItem.title = prompt('Title:') || 'New Demo';
                     newItem.desc = prompt('Description:') || 'Demo';
-                    newItem.type = prompt('Type (image/video):') || 'image';
                     newItem.url = prompt('URL:') || 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800&h=600&fit=crop';
                 } else if (section === 'team') {
                     newItem.name = prompt('Name:') || 'New Member';
                     newItem.role = prompt('Role:') || 'Role';
                     newItem.bio = prompt('Bio:') || 'Bio';
-                    newItem.avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(newItem.name)}&background=b8860b&color=fff&size=140`;
+                    newItem.avatar =
+                        `https://ui-avatars.com/api/?name=${encodeURIComponent(newItem.name)}&background=00E5FF&color=0B0D15&size=140`;
                 } else if (section === 'services') {
                     newItem.icon = prompt('Icon class (e.g., fa-camera):') || 'fa-camera';
                     newItem.title = prompt('Title:') || 'New Service';
@@ -2023,25 +3515,48 @@
 
         function renderClientDashboard(email) {
             const data = loadData();
-            const clientProjects = data.projects.filter(p => p.clientName.toLowerCase().includes(email.split('@')[0].toLowerCase()));
+            const clientProjects = data.projects.filter(p => p.clientName.toLowerCase().includes(email.split('@')[0]
+                .toLowerCase()));
+            const clientBookings = data.bookings.filter(b => b.email === email);
+
             const container = document.getElementById('clientContent');
-            if (!clientProjects.length) {
-                container.innerHTML = `<p>No projects found for ${email}. <br /> <a href="#contact" onclick="closeClientPortal()">Contact us</a> to start your project.</p>`;
-                return;
+            let html = `<h3>Welcome, ${email}</h3>`;
+
+            // Bookings
+            if (clientBookings.length > 0) {
+                html += `<h4 style="margin-top:20px;">Your Bookings</h4>`;
+                clientBookings.forEach(b => {
+                    html += `
+                        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow-3d);">
+                            <p><strong>${b.date}</strong> at <strong>${b.time}</strong></p>
+                            <p>Service: ${b.service}</p>
+                            <p>Status: <span class="status-badge ${b.status}">${b.status}</span></p>
+                        </div>
+                    `;
+                });
             }
-            let html = `<h3>Welcome, ${email}</h3><p>Your projects:</p>`;
-            clientProjects.forEach(p => {
-                html += `
-                    <div style="background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px;margin-bottom:16px;">
-                        <h4>${p.clientName} - ${p.type}</h4>
-                        <p>Status: <strong>${p.status}</strong></p>
-                        <p>Date: ${p.date}</p>
-                        ${p.deliverables ? `<p>Deliverables: <a href="#" onclick="alert('Gallery link: ${p.deliverables}')">View Gallery</a></p>` : ''}
-                        ${p.feedback ? `<p>Your feedback: ${p.feedback}</p>` : ''}
-                        ${!p.feedback ? `<button class="btn btn-gold" onclick="giveFeedback(${p.id})">Give Feedback</button>` : ''}
-                    </div>
-                `;
-            });
+
+            // Projects
+            if (clientProjects.length > 0) {
+                html += `<h4 style="margin-top:20px;">Your Projects</h4>`;
+                clientProjects.forEach(p => {
+                    html += `
+                        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow-3d);">
+                            <h4>${p.clientName} - ${p.type}</h4>
+                            <p>Status: <strong>${p.status}</strong></p>
+                            <p>Date: ${p.date}</p>
+                            ${p.deliverables ? `<p>Deliverables: <a href="#" onclick="alert('Gallery link: ${p.deliverables}')">View Gallery</a></p>` : ''}
+                            ${p.feedback ? `<p>Your feedback: ${p.feedback}</p>` : ''}
+                            ${!p.feedback ? `<button class="btn" onclick="giveFeedback(${p.id})">Give Feedback</button>` : ''}
+                        </div>
+                    `;
+                });
+            }
+
+            if (clientBookings.length === 0 && clientProjects.length === 0) {
+                html += `<p>No bookings or projects found for ${email}. <br /> <a href="#booking" onclick="closeClientPortal()">Book an appointment</a> or <a href="#contact" onclick="closeClientPortal()">contact us</a>.</p>`;
+            }
+
             container.innerHTML = html;
         }
 
@@ -2053,7 +3568,8 @@
                 const project = data.projects.find(p => p.id === projectId);
                 if (project) {
                     project.feedback = comment || 'No comment';
-                    data.feedbacks.push({ projectId, rating: parseInt(rating), comment: comment || '', client: project.clientName });
+                    data.feedbacks.push({ projectId, rating: parseInt(rating), comment: comment || '',
+                        client: project.clientName });
                     saveData(data);
                     renderClientDashboard(currentClient);
                     renderAll();
@@ -2069,7 +3585,7 @@
         document.getElementById('clientLogout').addEventListener('click', closeClientPortal);
 
         // ============================================================
-        //  ADMIN – Ctrl+Shift+A
+        //  ADMIN — Ctrl+Shift+A
         // ============================================================
         const ADMIN_CREDENTIALS = { username: 'admin', password: 'amingos123' };
 
@@ -2097,6 +3613,8 @@
             document.getElementById('adminPanel').style.display = 'block';
             document.getElementById('adminPanel').classList.add('active');
             renderAdmin();
+            renderAdminBookings();
+            renderAdminBookedDates();
         }
 
         document.getElementById('adminLogout').addEventListener('click', function() {
@@ -2106,30 +3624,29 @@
         });
 
         // ============================================================
-        //  CURSOR
+        //  CURSOR GLOW
         // ============================================================
-        const dot = document.getElementById('cursorDot');
-        const ring = document.getElementById('cursorRing');
+        const glow = document.getElementById('cursorGlow');
+        let glowActive = false;
 
         document.addEventListener('mousemove', (e) => {
-            dot.style.left = e.clientX + 'px';
-            dot.style.top = e.clientY + 'px';
-            ring.style.left = e.clientX + 'px';
-            ring.style.top = e.clientY + 'px';
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+            if (!glowActive) {
+                glow.classList.add('active');
+                glowActive = true;
+            }
         });
 
-        document.querySelectorAll('a, button, .team-card, .portfolio-item, .flip-card, .bts-item').forEach(el => {
-            el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-            el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-        });
+        document.querySelectorAll('a, button, .team-card, .portfolio-item, .service-card, .bts-item, .day-cell, .time-slot')
+            .forEach(el => {
+                el.addEventListener('mouseenter', () => glow.classList.add('hover'));
+                el.addEventListener('mouseleave', () => glow.classList.remove('hover'));
+            });
 
         document.addEventListener('mouseleave', () => {
-            dot.style.opacity = '0';
-            ring.style.opacity = '0';
-        });
-        document.addEventListener('mouseenter', () => {
-            dot.style.opacity = '1';
-            ring.style.opacity = '0.6';
+            glow.classList.remove('active');
+            glowActive = false;
         });
 
         // ============================================================
@@ -2143,67 +3660,15 @@
         });
 
         // ============================================================
-        //  HERO 3D TILT
-        // ============================================================
-        const hero3d = document.getElementById('hero3d');
-        if (hero3d) {
-            document.getElementById('hero').addEventListener('mousemove', (e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                hero3d.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
-            });
-            document.getElementById('hero').addEventListener('mouseleave', () => {
-                hero3d.style.transform = 'rotateY(0deg) rotateX(0deg)';
-            });
-        }
-
-        // ============================================================
-        //  TYPING ANIMATION
-        // ============================================================
-        (function typing() {
-            const phrases = ['That Connects', 'That Inspire', 'That Last Forever'];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const el = document.getElementById('typedText');
-
-            function type() {
-                const current = phrases[phraseIndex];
-                if (!isDeleting) {
-                    el.textContent = current.substring(0, charIndex + 1);
-                    charIndex++;
-                    if (charIndex === current.length) {
-                        isDeleting = true;
-                        setTimeout(type, 2000);
-                        return;
-                    }
-                    setTimeout(type, 80);
-                } else {
-                    el.textContent = current.substring(0, charIndex - 1);
-                    charIndex--;
-                    if (charIndex === 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                        setTimeout(type, 500);
-                        return;
-                    }
-                    setTimeout(type, 40);
-                }
-            }
-            setTimeout(type, 1000);
-        })();
-
-        // ============================================================
         //  THEME TOGGLE
         // ============================================================
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', savedTheme);
         themeToggle.addEventListener('click', () => {
             const current = html.getAttribute('data-theme');
-            const next = current === 'light' ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
         });
@@ -2245,7 +3710,7 @@
         // ============================================================
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            navbar.style.boxShadow = window.scrollY > 60 ? '0 4px 30px rgba(0,0,0,0.06)' : 'none';
+            navbar.style.boxShadow = window.scrollY > 60 ? '0 4px 30px rgba(0,0,0,0.2)' : 'none';
         });
 
         // ============================================================
@@ -2254,7 +3719,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
 
@@ -2272,7 +3740,8 @@
                     }
                 });
             }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger').forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger').forEach(el =>
+                observer.observe(el));
         }
 
         // ============================================================
@@ -2288,15 +3757,30 @@
         });
 
         // ============================================================
+        //  VIDEO HERO — Play/Pause
+        // ============================================================
+        document.getElementById('heroVideoContainer').addEventListener('click', function() {
+            const video = this.querySelector('video');
+            if (video.paused) {
+                video.play();
+                this.querySelector('.play-overlay i').className = 'fas fa-pause-circle';
+            } else {
+                video.pause();
+                this.querySelector('.play-overlay i').className = 'fas fa-play-circle';
+            }
+        });
+
+        // ============================================================
         //  INIT
         // ============================================================
         renderAll();
         observeReveals();
         setTimeout(updateCarousel, 100);
 
-        console.log('🚀 Amingos Production — Premium with Confetti Feedback!');
+        console.log('🚀 Amingos Production — Complete with Booking System');
         console.log('🔐 Admin: Ctrl+Shift+A (admin / amingos123)');
-        console.log('✨ Features: Modern fonts, 3D tilt, flip cards, masonry, lightbox, custom cursor, scroll progress, carousel, and animated feedback with confetti.');
+        console.log('📅 Booking: Clients can schedule appointments directly.');
+        console.log('💡 Idea: Worth it? Absolutely! It reduces back-and-forth, improves client experience, and saves admin time.');
     </script>
 </body>
 </html>
